@@ -6,10 +6,12 @@ class Board {
 	public:
 
 		// Il costruttore di Default crea una board con elementi randomici
-	    Board();
+	    Board(void);
 
 		// Il costruttore con un elemento al suo interno utilizza una board preimpostata (Ai fini di testing)
 	    explicit Board(int elem);
+
+		void showBoard();
 
 
 	private:
