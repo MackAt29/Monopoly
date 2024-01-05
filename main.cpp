@@ -5,11 +5,11 @@
 int main(int argc, char** argv) {
     std::srand ( unsigned ( std::time(0) ) );
     //Ricevitore di argomento da prompt di comando
-    /*if(argv[1] == std::string("computer"))
-        std::cout<<1;
+    if(argv[1] == std::string("computer"))
+        std::cout<<1<< std::endl;
     else if(argv[1] == std::string("human"))
-        std::cout<<-1;
-    */
+        std::cout<<-1<< std::endl;
+    
     
     //Per prima cosa devo creare la board di gioco
     Board game;
