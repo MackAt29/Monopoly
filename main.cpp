@@ -1,11 +1,9 @@
 #include <iostream>
 #include "Board.h"
-#include "Board.cpp"
 #include <vector>
 
 int main(int argc, char** argv) {
     std::srand ( unsigned ( std::time(0) ) );
-    std::cout << "Io sono un pinco Palla."<<std::endl;
     //Ricevitore di argomento da prompt di comando
     /*if(argv[1] == std::string("computer"))
         std::cout<<1;
