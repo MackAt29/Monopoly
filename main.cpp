@@ -4,29 +4,36 @@
 
 int main(int argc, char** argv) {
     std::srand ( unsigned ( std::time(0) ) );
-    //Ricevitore di argomento da prompt di comando
+    std::vector<char> rounds;
+
+    //Ricevitore di argomento da prompt di comando per la struttura di partecipazione al gioco (aka. Se gioca anche l'utente oppure no)
     if(argv[1] == std::string("computer"))
-        std::cout<<1<< std::endl;
+        rounds = {'1', '2', '3', '4'};
     else if(argv[1] == std::string("human"))
-        std::cout<<-1<< std::endl;
+        rounds = {'1', '2', '3', 'H'};
+
+    //REQUIRED: Metodo del Player per il tiro di dado, così da decidere l'ordine di gioco
     
+    std::vector<char>::iterator p = rounds.begin();
+
+    // Ciclo durata partita
+    std::cout << "Sto puntando: " << *p << std::endl;
+    while (rounds.size() > 1) {
+        //REQUIRED: Player Turn
+        for(int i = 0; i<rounds.size();++i){
+            //REQUIRED: Metodi del turno del giocatore
+
+            //REQUIRED: if(Player[i].getGold<=0) p=rounds.erase(p);
+        }
+        //TEMP: Rimozione dell'elemento puntato
+        std::cout << "Rimosso: " << *p << std::endl;
+        p=rounds.erase(p);
+    }
     
     //Per prima cosa devo creare la board di gioco
     Board game;
     game.showBoard();
 
-
-    // Definizione del vettore con i turni dei giocatori.
-    std::vector<int> rounds = {1, 2, 3, 4};
-    std::vector<int>::iterator p = rounds.begin();
-
-    std::cout << "Sto puntando: " << *p << std::endl;
-    // Ciclo durata partita
-    while (rounds.size() > 1) {
-        // Rimozione casuale di un valore con un puntatore
-        std::cout << "Rimosso: " << *p << std::endl;
-        p=rounds.erase(p);
-    }
 
     std::cout << "Il vincitore della partita e': " << *p << std::endl;
     return 0;
