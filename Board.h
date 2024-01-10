@@ -1,5 +1,6 @@
 #ifndef Board_h
 #define Board_h
+#include "Player.h"
 #include <iostream>     // std::cout
 #include <algorithm>    // std::random_shuffle
 #include <vector>       // std::vector

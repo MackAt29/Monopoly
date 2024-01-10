@@ -9,7 +9,7 @@ Board::Board(){
     this->v_[0]='P';
     for (int i = 1; i < 28; ++i) {
         if(i%7==0){
-            this->v_[i]=' ';
+            this->v_[i]=' '; 
             ++i;
         }
         this->v_[i] = a[j];
