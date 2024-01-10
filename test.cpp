@@ -8,7 +8,7 @@ int main (){
         v[i] = 0;
     }*/
 
-    char v[28] = {'P', 'L','L','E','S','S','S',' ', 'S', 'E', 'S', 'E', 'L', 'E', ' ', 'E', 'E', 'S', 'L', 'S', 'S', ' ', 'E', 'E', 'S', 'L', 'S', 'L'};
+    char v[28] = {'P', 'L','L','E','S','S','S',' ', 'S', 'E', 'S', 'E', 'L', 'E', ' ', 'E', 'E', 's', 'L', 'S', 'S', ' ', 'E', 'E', 'S', 'L', 'S', 'Q'};
     //Stampa griglia
     std::cout<<"     1     2     3     4     5     6     7     8     "<<std::endl;
     std::cout<<"A  | "<<v[0]<<" | | "<<v[1]<<" | | "<<v[2]<<" | | "<<v[3]<<" | | "<<v[4]<<" | | "<<v[5]<<" | | "<<v[6]<<" | | "<<v[7]<<" |"<<std::endl;
@@ -19,6 +19,11 @@ int main (){
     std::cout<<"G  | "<<v[23]<<" |                                     | "<<v[12]<<" |"<<std::endl;
     std::cout<<"H  | "<<v[22]<<" |                                     | "<<v[13]<<" |"<<std::endl;
     std::cout<<"I  | "<<v[21]<<" | | "<<v[20]<<" | | "<<v[19]<<" | | "<<v[18]<<" | | "<<v[17]<<" | | "<<v[16]<<" | | "<<v[15]<<" | | "<<v[14]<<" |"<<std::endl;
+    std::cout<<v[17]<<std::endl;
+    int newPosition = (18 - 1 + 10) % 28;
+    std::cout<<newPosition<<std::endl;
+    std::cout<<v[newPosition]<<std::endl;
+
     return 0;
 }
 
