@@ -6,15 +6,18 @@ Player::Player(const std::string& playerName, bool human, int initialDiceRoll)
     std::cout << name << " rolled an initial dice result of " << initialDiceRoll << std::endl;
 }
 
+//Potrebbe essere superfluo in caso decidiamo di mostrare gli esiti dei singoli dadi
 int Player::getDiceRoll() {
-    return rollDice();
-}
-
-//lancio di due dadi DA SISTEMARE
-int Player::rollDice() {
     int diceResult1 = rollDice();
     int diceResult2 = rollDice();
     int totalDiceResult = diceResult1 + diceResult2;
+
+    std::cout << "Rolled " << diceResult1 << " and " << diceResult2 << ". Total: " << totalDiceResult << std::endl;
+    return totalDiceResult;
+}
+
+//lancio di due dadi
+int Player::rollDice() {
     return (rand() % 6) + 1;
 }
 
@@ -43,17 +46,22 @@ void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
 */
 
 void Player::takeTurn() {
+    /*Se vogliamo mostrare i risultati singoli su questo metodo o su quello di tiro dei dadi
     int diceResult1 = rollDice();
     int diceResult2 = rollDice();
     int totalDiceResult = diceResult1 + diceResult2;
-
     std::cout << name << "'s turn: Rolled " << diceResult1 << " and " << diceResult2 << ". Total: " << totalDiceResult << std::endl;
-
+    */
+    
+    //In questo modo mostra: Nome's turn: (metodo di tiro dei dadi + output dei risultati)
+    std::cout << name << "'s turn: ";
+    int totalDiceResult =getDiceRoll();
     setPosition(totalDiceResult);
 
     // Esegui altre azioni durante il turno, come controllare l'affitto, l'acquisto di proprietà, ecc.
 
-   /* if (currentLocation != nullptr && currentLocation->owner != nullptr) {
+    /*
+    if (currentLocation != nullptr && currentLocation->owner != nullptr) {
         //payPlayer(*(currentLocation->owner), currentLocation->rent);
     } else {
         if (isHuman) {
@@ -67,7 +75,8 @@ void Player::takeTurn() {
                 std::cout << name << " decides to do nothing." << std::endl;
             }
         }
-    }*/
+    }
+    */
 }
 
 void Player::move(int steps) {
