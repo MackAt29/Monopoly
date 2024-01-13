@@ -11,6 +11,12 @@ add_library(Player
 Player.h
 Player.cpp
 )
+
+add_library(Property
+Property.h
+Property.cpp
+)
+
 add_executable(main
 main.cpp
 )
@@ -18,4 +24,5 @@ main.cpp
 target_link_libraries(
 Board
 Player
+Property
 )
