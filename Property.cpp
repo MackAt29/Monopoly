@@ -1,132 +1,105 @@
-﻿/*Casella:{
-const int category; (0-1-2) economica-standard-lusso
-const int tPrice; Costo della casella per l’acquisto (6-10-20 fiorini in base alla categoria)
-const int hPrice; Costo per costruire la Casa=Costo per costruire l’albergo (3-5-10 fiorini in base alla categoria)
-const int upPrice; Costo per costruire l’albergo (3-5-10 fiorini in base alla categoria)
-int stayCost=0; Costo quando un giocatore non proprietario si ferma sulla casella (non è const perchè durante la partita il valore aumenta)
-int status = 0; (0-1-2-3) vuota-acquistata-casa-albergo
-&Pedina owner; a chi appartiene la casella (se è stata acquistata)
-array &Pedina occupied[]; array di quanti giocatori sono attualmente in questa casella, una idea su come segnare se e quali player ci sono.
-metodo Print(): mostra in output (category + status + occupied[](mostra i giocatori presenti, altrimenti null quindi lascia vuoto)
+#include "player.h"
+#include <iostream>
+
+Player::Player(const std::string& playerName, bool human, int initialDiceRoll)
+    : name(playerName), isHuman(human), gold(100), currentLocation(nullptr), HasLost(false) {
+    // Utilizza il tiro iniziale fornito come parametro
+    std::cout << name << " rolled an initial dice result of " << initialDiceRoll << std::endl;
 }
-*/
-#include "Property.h"
 
-	int Property::getCategory() {
-		return Category;
-	}
-	int Property::getBuyPrice() {
-		return BuyPrice;
-	}
-	int Property::getHousePrice() {
-		return HousePrice;
-	}
-	int Property::getHotelPrice() {
-		return HotelPrice;
-	}
-	int Property::getRentPrice() {
-		return RentPrice;
-	}
-	int Property::getStatus() {
-		return Status;
-	}
+int Player::getDiceRoll() {
+    return rollDice();
+}
 
-	void Property::setStatus(int newStatus) {
-		Status = newStatus;
-		Property::updateRentPrice();
-	}
+//lancio di due dadi DA SISTEMARE
+int Player::rollDice() {
+    int diceResult1 = rollDice();
+    int diceResult2 = rollDice();
+    int totalDiceResult = diceResult1 + diceResult2;
+    return (rand() % 6) + 1;
+}
 
+void Player::setPosition(int diceResult) {
+    move(diceResult);
+}
 
-	Property::Property(int newCategory) {
-		//if (Category > 3 || Category < 0) throw "Invalid category value.";
-		switch (newCategory)
-		{
-		case 0:
-			this->Category = newCategory;
-			this->BuyPrice = 6;
-			this->HousePrice = 3;
-			this->HotelPrice = 3;
-			this->Status = 0;
-			updateRentPrice();
-			break;
-		case 1:
-			this->Category = newCategory;
-			this->BuyPrice = 10;
-			this->HousePrice = 5;
-			this->HotelPrice = 5;
-			this->Status = 0;
-			updateRentPrice();
-			break;
-		case 2:
-			this->Category = newCategory;
-			this->BuyPrice = 20;
-			this->HousePrice = 10;
-			this->HotelPrice = 10;
-			this->Status = 0;
-			updateRentPrice();
-			break;
-		case 3:
-			this->Category = newCategory;
-			this->Status = 0;
-			break;
-		default:
-			throw "Invalid category value.";
-			break;
-		}
-	}
-	void Property::buyLand() {
-		if (Category == 3) { throw "Nothing to buy over here."; }
-		Status = 1;
-		updateRentPrice();
-	}
-	void Property::buyHouse() {
-		if (Category == 3) { throw "Nothing to buy over here."; }
-		Status = 2;
-		updateRentPrice();
-	}
-	
-	//bisognerebbe controllare che in tutti i buy io non abbia gia lo stesso status... cioe
-	//se compro una casa devo controllare anche che io non l abbia gia comprata, uguale per albergo e terreno
+//deve restituire un intero
+const Property* Player::getPosition() const {
+    return currentLocation;
+}
 
-	//devo controllare che abbia prima comprato una casa
-	void Property::buyHotel() {
-		if (Category == 3) { throw "Nothing to buy over here."; }
-		Status = 3;
-		updateRentPrice();
-	}
-	void Property::ripPlayer() {
-		Status = 0;
-		updateRentPrice();
-	}
+void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
+    gold -= rentAmount;
+    propertyOwner.gold += rentAmount;
 
-	//print
-	//devo fare l overload dell ostrem ....
+    std::cout << name << " paid rent of " << rentAmount << " to " << propertyOwner.name
+              << ". Remaining gold: " << gold << std::endl;
 
+    if (checkBalance(0)) {
+        HasLost = true;
+        std::cout << name << " has lost the game!" << std::endl;
+    }
+}
 
-	//Player owner;
+void Player::takeTurn() {
+    int diceResult1 = rollDice();
+    int diceResult2 = rollDice();
+    int totalDiceResult = diceResult1 + diceResult2;
 
+    std::cout << name << "'s turn: Rolled " << diceResult1 << " and " << diceResult2 << ". Total: " << totalDiceResult << std::endl;
 
-	void Property::updateRentPrice() {
-		switch (Status)
-		{
-		case 0:
-		case 1:
-			RentPrice = 0;
-			break;
-		case 2:
-			if (Category == 0) RentPrice = 2;
-			else if (Category == 1) RentPrice = 4;
-			else if (Category == 2) RentPrice = 7;
-			else throw "Invalid category value.";
-			break;
-		case 3:
-			if (Category == 0) RentPrice = 4;
-			else if (Category == 1) RentPrice = 8;
-			else if (Category == 2) RentPrice = 14;
-			else throw "Invalid category value.";
-			break;
-		default:
-			break;
-		}
-	}
+    setPosition(totalDiceResult);
+
+    // Esegui altre azioni durante il turno, come controllare l'affitto, l'acquisto di proprietà, ecc.
+
+    if (currentLocation != nullptr && currentLocation->owner != nullptr) {
+        payPlayer(*(currentLocation->owner), currentLocation->rent);
+    } else {
+        if (isHuman) {
+            humanChoice();
+        } else {
+            // Logica per la scelta del giocatore robot (25% di probabilità)
+            if (rand() % 4 == 0) {
+                std::cout << name << " decides to take a random action." << std::endl;
+                // Implementa l'azione casuale del giocatore robot
+            } else {
+                std::cout << name << " decides to do nothing." << std::endl;
+            }
+        }
+    }
+}
+
+void Player::move(int steps) {
+    // Numero totale di caselle nel gioco
+    const int boardSize = 28;                                                           
+
+    // Calcola la nuova posizione sulla base del vettore delle caselle
+    //currentLocation è l'indice del vettore delle posizioni dei giocatori
+    int newPosition = (currentLocation + steps) % boardSize;
+
+    // Aggiorna currentLocation in base alla nuova posizione
+    currentLocation = &board[newPosition];
+
+    std::cout << name << " moved " << steps << " steps. New position: " << currentLocation->name << std::endl;
+
+    // Se il giocatore è andato oltre il bordo del vettore delle caselle, aggiungi 20 al saldo
+    if (newPosition < currentLocation - &board[0]) {
+        gold += 20;
+        std::cout << name << " passed the starting position and earned 20 gold. New balance: " << gold << std::endl;
+    }
+}
+
+bool Player::checkBalance(int amount) {
+    if (gold < amount) {
+        std::cout << name << " has insufficient funds and has lost the game!" << std::endl;
+        return true;
+    }
+    return false;
+}
+
+void Player::humanChoice() {
+    // Logica per la scelta del giocatore umano
+    std::cout << "What do you want to do?" << std::endl;
+    // Implementa le azioni disponibili, ad esempio acquisto di proprietà, costruzione di edifici, ecc.
+}
 
