@@ -1,10 +1,7 @@
 #include "player.h"
 
-Player::Player(const std::string& playerName, bool human, int initialDiceRoll)
-    : name(playerName), isHuman(human), gold(100), currentLocation(0), HasLost(false) {
-    // Utilizza il tiro iniziale fornito come parametro
-    std::cout << name << " rolled an initial dice result of " << initialDiceRoll << std::endl;
-}
+Player::Player(const char& playerName, bool human)
+    : name(playerName), isHuman(human), gold(100), currentLocation(0), HasLost(false), initTurn(getDiceRoll()) {}
 
 //Potrebbe essere superfluo in caso decidiamo di mostrare gli esiti dei singoli dadi
 int Player::getDiceRoll() {

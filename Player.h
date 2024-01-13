@@ -1,22 +1,24 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "Property.h"
 #include <iostream>
 #include <vector>
 //#include "property.h"  // Includi la definizione della classe Property (probabilmente sarà casella)
 
 class Player {
 public:
-    std::string name;
+    char name;
     //std::vector<Property> ownedProperties;
     bool isHuman;
     int gold;
     //const Property* currentLocation; // Puntatore alla casella corrente
     int currentLocation;
+    int initTurn;
     bool HasLost; // Flag per indicare se il giocatore ha perso
     const int boardSize = 28;
 
-    Player(const std::string& playerName, bool human, int initialDiceRoll);
+    Player(const char& playerName, bool human);
 
     //metodo per la scelta del turno
     int getDiceRoll();
@@ -24,6 +26,8 @@ public:
     int rollDice();
     //inizializzazione e settaggio della posizione del giocatore
     void setPosition(int diceResult);
+    //Recupero esito del primo tiro di dadi()
+    int getInitTurn(){return initTurn;}
     //recupero informazioni sulla cella pari alla positzione del player
     //const Property* getPosition() const;
     
