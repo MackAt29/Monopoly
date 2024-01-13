@@ -14,7 +14,7 @@ public:
     const Property* currentLocation; // Puntatore alla casella corrente
     bool HasLost; // Flag per indicare se il giocatore ha perso
 
-    Player(const std::string& playerName, bool human);
+    Player(cconst std::string& playerName, bool human, int initialDiceRoll);
 
     //metodo per la scelta del turno
     int getDiceRoll();
