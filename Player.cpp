@@ -1,5 +1,6 @@
 #include "player.h"
 #include <iostream>
+#include <cstdlib>
 
 Player::Player(const std::string& playerName, bool human, int initialDiceRoll)
     : name(playerName), isHuman(human), gold(100), currentLocation(nullptr), HasLost(false) {
@@ -8,15 +9,10 @@ Player::Player(const std::string& playerName, bool human, int initialDiceRoll)
 }
 
 int Player::getDiceRoll() {
-    return rollDice();
-}
-
-//lancio di due dadi DA SISTEMARE
-int Player::rollDice() {
-    int diceResult1 = rollDice();
-    int diceResult2 = rollDice();
-    int totalDiceResult = diceResult1 + diceResult2;
-    return (rand() % 6) + 1;
+    int dado1 = (rand() % 6) + 1;
+    int dado2 = (rand() % 6) + 1;
+    int risultatoTotale = dado1 + dado2;
+    return risultatoTotale;
 }
 
 void Player::setPosition(int diceResult) {
@@ -28,6 +24,7 @@ const Property* Player::getPosition() const {
     return currentLocation;
 }
 
+//metodo pagamento affitto
 void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
     gold -= rentAmount;
     propertyOwner.gold += rentAmount;
@@ -41,12 +38,14 @@ void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
     }
 }
 
+//metodo turno player
 void Player::takeTurn() {
-    int diceResult1 = rollDice();
-    int diceResult2 = rollDice();
-    int totalDiceResult = diceResult1 + diceResult2;
+    //int diceResult1 = rollDice();
+    //int diceResult2 = rollDice();
+    //int totalDiceResult = diceResult1 + diceResult2;
+    int totalDiceResult = getDiceRoll();
 
-    std::cout << name << "'s turn: Rolled " << diceResult1 << " and " << diceResult2 << ". Total: " << totalDiceResult << std::endl;
+    //std::cout << name << "'s turn: Rolled " << diceResult1 << " and " << diceResult2 << ". Total: " << totalDiceResult << std::endl;
 
     setPosition(totalDiceResult);
 

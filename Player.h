@@ -2,8 +2,8 @@
 #define PLAYER_H
 
 #include <iostream>
-#include <vector>
-#include "property.h"  // Includi la definizione della classe Property (probabilmente sarà casella)
+#include <vector> 
+#include "property.h"
 
 class Player {
 public:
@@ -16,10 +16,8 @@ public:
 
     Player(cconst std::string& playerName, bool human, int initialDiceRoll);
 
-    //metodo per la scelta del turno
-    int getDiceRoll();
     //metodo lancio dadi
-    int rollDice();
+    int getDiceRoll();
     //inizializzazione e settaggio della posizione del giocatore
     void setPosition(int diceResult);
     //recupero informazioni sulla cella pari alla positzione del player
