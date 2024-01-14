@@ -2,10 +2,12 @@
 #include <iostream>
 #include <cstdlib>
 
-Player::Player(const std::string& playerName, bool human, int initialDiceRoll)
-    : name(playerName), isHuman(human), gold(100), currentLocation(nullptr), HasLost(false) {
+Player::Player(const char& playerName, bool human)
+    : name(playerName), isHuman(human), gold(100), currentLocation(0), HasLost(false), initTurn(getDiceRoll()) {
+//Player::Player(const std::string& playerName, bool human, int initialDiceRoll)
+    //: name(playerName), isHuman(human), gold(100), currentLocation(nullptr), HasLost(false) {
     // Utilizza il tiro iniziale fornito come parametro
-    std::cout << name << " rolled an initial dice result of " << initialDiceRoll << std::endl;
+    //std::cout << name << " rolled an initial dice result of " << initialDiceRoll << std::endl;
 }
 
 int Player::getDiceRoll() {

@@ -7,6 +7,19 @@
 
 class Player {
 public:
+
+    char name;
+    //std::vector<Property> ownedProperties;
+    bool isHuman;
+    int gold;
+    //const Property* currentLocation; // Puntatore alla casella corrente
+    int currentLocation;
+    int initTurn;
+    bool HasLost; // Flag per indicare se il giocatore ha perso
+    const int boardSize = 28;
+
+    Player(const char& playerName, bool human);
+    /*
     std::string name;
     std::vector<Property> ownedProperties;
     bool isHuman;
@@ -15,7 +28,8 @@ public:
     bool HasLost; // Flag per indicare se il giocatore ha perso
 
     Player(cconst std::string& playerName, bool human, int initialDiceRoll);
-
+    */
+   
     //metodo lancio dadi
     int getDiceRoll();
     //inizializzazione e settaggio della posizione del giocatore
