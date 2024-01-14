@@ -18,6 +18,10 @@ Board::Board(){
 
 }
 
+Property& Board::getCasella(int currentLocation){
+    return v_[currentLocation];
+}
+
 void Board::showBoard(const std::vector<Player>& players){
     std::string a[28] = {"","","","","","","","","","","","","","","","","","","","","","","","","","",""};
     for(int i=0;i<players.size();++i){
