@@ -4,15 +4,15 @@
 #include "Property.h"
 #include <iostream>
 #include <vector>
-//#include "property.h"  // Includi la definizione della classe Property (probabilmente sarà casella)
+
+class Property;
 
 class Player {
 public:
     char name;
-    //std::vector<Property> ownedProperties;
+    std::vector<Property> ownedProperties;
     bool isHuman;
     int gold;
-    //const Property* currentLocation; // Puntatore alla casella corrente
     int currentLocation;
     int initTurn;
     bool HasLost; // Flag per indicare se il giocatore ha perso
@@ -33,12 +33,15 @@ public:
     //recupero informazioni sulla cella pari alla positzione del player
     //const Property* getPosition() const;
     
+    //Tira i dadi e avanza
+    void advance();
     //effetuare il turno con tiro di due dadi e eventuale mossa di acquisto o pagamento
-    void takeTurn();
+    void takeTurn(const Property& casella);
     
     //pagamento affitto sulla casella
-    //void payPlayer(const Player& propertyOwner, int rentAmount);
-    
+    void payPlayer(Player* propertyOwner, int rentAmount);
+
+
 private:
     void move(int steps);
     bool checkBalance(int amount);
