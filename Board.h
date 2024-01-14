@@ -14,6 +14,8 @@ class Board {
 		// Il costruttore di Default crea una board con elementi randomici
 	    Board(void);
 
+		Property& getCasella(int currentLocation);
+
 		void showBoard(const std::vector<Player>& players);
 
 

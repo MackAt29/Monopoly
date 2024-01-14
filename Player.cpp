@@ -1,4 +1,4 @@
-#include "player.h"
+#include "Player.h"
 
 Player::Player(const char& playerName, bool human)
     : name(playerName), isHuman(human), gold(100), currentLocation(0), HasLost(false), initTurn(getDiceRoll()) {}
@@ -28,39 +28,32 @@ void Player::setPosition(int diceResult) {
 const Property* Player::getPosition() const {
     return currentLocation;
 }
+*/
 
-void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
+void Player::payPlayer(Player* propertyOwner, int rentAmount) {
     gold -= rentAmount;
-    propertyOwner.gold += rentAmount;
+    propertyOwner->gold += rentAmount;
 
-    std::cout << name << " paid rent of " << rentAmount << " to " << propertyOwner.name
-              << ". Remaining gold: " << gold << std::endl;
+    std::cout << name << " paid rent of " << rentAmount << " to " << propertyOwner->name << ". Remaining gold: " << gold << std::endl;
 
     if (checkBalance(0)) {
         HasLost = true;
         std::cout << name << " has lost the game!" << std::endl;
     }
 }
-*/
 
-void Player::takeTurn() {
-    /*Se vogliamo mostrare i risultati singoli su questo metodo o su quello di tiro dei dadi
-    int diceResult1 = rollDice();
-    int diceResult2 = rollDice();
-    int totalDiceResult = diceResult1 + diceResult2;
-    std::cout << name << "'s turn: Rolled " << diceResult1 << " and " << diceResult2 << ". Total: " << totalDiceResult << std::endl;
-    */
-    
+void Player::advance() {
     //In questo modo mostra: Nome's turn: (metodo di tiro dei dadi + output dei risultati)
     std::cout << name << "'s turn: ";
     int totalDiceResult =getDiceRoll();
     setPosition(totalDiceResult);
+}
 
+/*
+void takeTurn(const Property& casella){
     // Esegui altre azioni durante il turno, come controllare l'affitto, l'acquisto di proprietà, ecc.
-
-    /*
-    if (currentLocation != nullptr && currentLocation->owner != nullptr) {
-        //payPlayer(*(currentLocation->owner), currentLocation->rent);
+    if (casella.getOwner() != nullptr) {
+        //payPlayer(*(casella.getOwner()), currentLocation->rent);
     } else {
         if (isHuman) {
             humanChoice();
@@ -74,8 +67,7 @@ void Player::takeTurn() {
             }
         }
     }
-    */
-}
+}*/
 
 void Player::move(int steps) {
     // Numero totale di caselle nel gioco                                                           

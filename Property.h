@@ -11,6 +11,7 @@
 #define LUX_HOME 7;
 #define LUX_HOTEL 14;
 
+class Player;
 
 class Property {
 public:
@@ -32,6 +33,7 @@ public:
 	void ripPlayer();
 
 	friend std::ostream& operator<<(std::ostream& output, const Property& Pr);
+
 
 private:
 	int Category = -1;

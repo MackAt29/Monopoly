@@ -24,10 +24,13 @@ Casella aka Property.
 	int Property::getStatus() {
 		return Status;
 	}
-//Il proprietario serve per impostarlo quando questo prende possesso di un nuovo territorio
-	Player Property::getOwner() {
-		if (owner == nullptr) throw "No owner for this land.";
-		return *owner;
+
+	Player* Property::getOwner() {
+		if (owner == nullptr) {
+			std::cout<<"No owner for this land.\n";
+			//throw "No owner for this land.";
+		}
+		return owner;
 	}
 
 	void Property::setStatus(int newStatus) {
@@ -78,6 +81,7 @@ Casella aka Property.
 		if (Category == 3) { throw "Nothing to buy over here."; }
 		Status = 1;
 		owner = newOwner;
+		owner = newOwner;
 		updateRentPrice();
 	}
 //Metodo per comprare una casa
@@ -101,10 +105,12 @@ Casella aka Property.
 	void Property::ripPlayer() {
 		Status = 0;
 		owner = nullptr;
+		owner = nullptr;
 		updateRentPrice();
 	}
 //Metodo per quando si compra una casa o un hotel di un dato terreno si cambia il valore dell'affitto.
 	void Property::updateRentPrice() {
+		switch (getStatus())
 		switch (getStatus())
 		{
 		case 0:
