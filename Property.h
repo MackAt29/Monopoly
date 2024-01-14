@@ -10,6 +10,7 @@
 #define LUX_HOME 7;
 #define LUX_HOTEL 14;
 
+class Property;
 
 class Property {
 public:

@@ -1,71 +1,40 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "Board.h"
 #include "Property.h"
 #include <iostream>
 #include <vector> 
-#include "property.h"
 
 class Player {
-public:
-
+private:
     char name;
-    //std::vector<Property> ownedProperties;
     bool isHuman;
     int gold;
-    //const Property* currentLocation; // Puntatore alla casella corrente
     int currentLocation;
+    bool hasLost;
     int initTurn;
-    bool HasLost; // Flag per indicare se il giocatore ha perso
-    const int boardSize = 28;
 
-    Player(const char& playerName, bool human);
-    /*
-    std::string name;
-    std::vector<Property> ownedProperties;
-#include <vector>
-//#include "property.h"  // Includi la definizione della classe Property (probabilmente sarà casella)
-
-class Player {
-public:
-    char name;
-    //std::vector<Property> ownedProperties;
-    bool isHuman;
-    int gold;
-    //const Property* currentLocation; // Puntatore alla casella corrente
-    int currentLocation;
-    int initTurn;
-    bool HasLost; // Flag per indicare se il giocatore ha perso
-    int boardSize = 28;
-
-    Player(cconst std::string& playerName, bool human, int initialDiceRoll);
-    */
-   
-    Player(const char& playerName, bool human);
-    // Costruttore di copia
-    Player(const Player& other);
-
-    //metodo per la scelta del turno
+    //lancio dadi
     int getDiceRoll();
-    //metodo lancio dadi
-    int getDiceRoll();
-    //inizializzazione e settaggio della posizione del giocatore
+    //settaggio della posizione del giocatore
     void setPosition(int diceResult);
+    //recupero posizione del giocatore
+    int getPosition(){return currentLocation;}
     //Recupero esito del primo tiro di dadi()
     int getInitTurn(){return initTurn;}
-    //recupero informazioni sulla cella pari alla positzione del player
-    //const Property* getPosition() const;
-    
-    //effetuare il turno con tiro di due dadi e eventuale mossa di acquisto o pagamento
-    void takeTurn();
-    
-    //pagamento affitto sulla casella
-    //void payPlayer(const Player& propertyOwner, int rentAmount);
-    
-private:
-    void move(int steps);
+    //mossa pedina e aggiunta gold per passaggio al via
+    void move(int steps, const Board& board);
+    //pagamento affitto casella
+    void payPlayer(const Player& propertyOwner, int rentAmount);
+    //check gold disponibile
     bool checkBalance(int amount);
-    void humanChoice();
+
+public:
+    Player(char playerName, bool human);
+
+    //turno del giocatore
+    void takeTurn(const Board& board);
 };
 
 #endif  // PLAYER_H
