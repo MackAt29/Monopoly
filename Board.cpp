@@ -9,16 +9,12 @@ Board::Board(){
     this->v_[0]='P';
     for (int i = 1; i < 28; ++i) {
         if(i%7==0){
-            this->v_[i]=' ';
+            this->v_[i]=' '; 
             ++i;
         }
         this->v_[i] = a[j];
         ++j;
     }
-    for (int i = 0; i < 28; ++i) {
-        std::cout<<this->v_[i] ;
-    }
-    std::cout<<std::endl;
 
 }
 
@@ -31,6 +27,7 @@ Board::Board(int elem){
 }
 
 void Board::showBoard(){
+    //REQUIRED: fare in modo che appaiano anche le posizioni dei player e v_ vettore di caselle
     std::cout<<"     1     2     3     4     5     6     7     8     "<<std::endl;
     std::cout<<"A  | "<<v_[0]<<" | | "<<v_[1]<<" | | "<<v_[2]<<" | | "<<v_[3]<<" | | "<<v_[4]<<" | | "<<v_[5]<<" | | "<<v_[6]<<" | | "<<v_[7]<<" |"<<std::endl;
     std::cout<<"C  | "<<v_[27]<<" |                                     | "<<v_[8]<<" |"<<std::endl;
