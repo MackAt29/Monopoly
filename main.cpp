@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
     
     //Per prima cosa devo creare la board di gioco
     Board game;
-    game.showBoard();
+    game.showBoard(rounds);
 
     std::vector<Player>::iterator p = rounds.begin();
     // Ciclo durata partita
@@ -66,6 +66,7 @@ int main(int argc, char** argv) {
         //TEMP: Rimozione dell'elemento puntato
         p=rounds.erase(p);
         std::cout << "\nHo rimosso un player";
+        game.showBoard(rounds);
         if(timelimit) turnLimit--;
     }
     std::cout<<std::endl;
