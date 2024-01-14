@@ -57,6 +57,7 @@ int main(int argc, char** argv) {
         //REQUIRED: Player Turn
         for(int i = 0; i<rounds.size();++i){
             //REQUIRED: Metodi del turno del giocatore
+            rounds.[i].takeTurn;
 
             //REQUIRED: if(Player[i].getGold<=0) p=rounds.erase(p);
 
@@ -66,7 +67,6 @@ int main(int argc, char** argv) {
         //TEMP: Rimozione dell'elemento puntato
         p=rounds.erase(p);
         std::cout << "\nHo rimosso un player";
-        game.showBoard(rounds);
         if(timelimit) turnLimit--;
     }
     std::cout<<std::endl;
