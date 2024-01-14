@@ -159,3 +159,13 @@ Casella aka Property.
 		if (Pr.Category == 3) { output << " "; return output; }; 
 		return output;
 	}
+//Metodo per stampare tutte le informazioni di una data casella
+	std::string Property::getInfo() {
+		std::string output = "Categoria casella: ";
+		if (Category == 0) { output = "Casella Economica"; };
+		if (Category == 1) { output = "Casella Standard"; };
+		if (Category == 2) { output = "Casella Lusso"; };
+		if (Category == 3) { output = "Casella Angolare"; return output; };
+		output = "  Prezzo affitto: " + RentPrice + output = "  Prezzo Terreno: " + BuyPrice + output = "  Prezzo casa: " + HousePrice + output = "  Prezzo Albergo: " + HotelPrice + output = "  Stato casella: " + Status;
+		return output;
+	}
