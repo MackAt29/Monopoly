@@ -30,7 +30,7 @@ public:
 	void ripPlayer();
 	//print
 
-	friend std::ostream& operator<<(std::ostream& output, const Property& P);
+	friend std::ostream& operator<<(std::ostream& output, const Property& Pr);
 
 private:
 	int Category = -1;
