@@ -1,5 +1,6 @@
 #pragma once
 #include "Player.h"
+#include <ostream>
 
 #define BASE_LAND 0;
 #define ECO_HOME 2;
@@ -28,6 +29,8 @@ public:
 	void buyLand(Player *newOwner);
 	void ripPlayer();
 	//print
+
+	friend std::ostream& operator<<(std::ostream& output, const Property& P);
 
 private:
 	int Category = -1;
