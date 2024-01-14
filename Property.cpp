@@ -161,7 +161,7 @@ Casella aka Property.
 			default: break;
 			}
 		};
-		if (Pr.Category == 3) { output << " "; return output; }; 
+		if (Pr.Category == 3) { return output; }; 
 		return output;
 	}
 //Metodo per stampare tutte le informazioni di una data casella

@@ -59,11 +59,11 @@ int main(int argc, char** argv) {
         for(int i = 0; i<rounds.size();++i){
             //REQUIRED: Metodi del turno del giocatore
             rounds[i].advance();
-            game.showBoard(rounds);/*
+            game.showBoard(rounds);
             Property& casella = game.getCasella(rounds[i].currentLocation);
             if (casella.getOwner() != nullptr && casella.getOwner() != &rounds[i]) {
                 rounds[i].payPlayer(casella.getOwner(), casella.getRentPrice());
-            }*/
+            }
             
             //
 
