@@ -25,9 +25,12 @@ Casella aka Property.
 		return Status;
 	}
 //Il proprietario serve per impostarlo quando questo prende possesso di un nuovo territorio
-	Player Property::getOwner() {
-		if (owner == nullptr) throw "No owner for this land.";
-		return *owner;
+	Player* Property::getOwner() {
+		if (owner == nullptr) {
+			std::cout<<"No owner for this land.\n";
+			//throw "No owner for this land.";
+		}
+		return owner;
 	}
 
 	void Property::setStatus(int newStatus) {
