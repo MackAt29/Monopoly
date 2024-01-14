@@ -23,7 +23,7 @@ private:
     //Recupero esito del primo tiro di dadi()
     int getInitTurn(){return initTurn;}
     //mossa pedina e aggiunta gold per passaggio al via
-    void move(int steps, const Board& board);
+    void move(int steps);
     //pagamento affitto casella
     void payPlayer(const Player& propertyOwner, int rentAmount);
     //check gold disponibile
