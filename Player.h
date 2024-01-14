@@ -1,7 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "Board.h"
 #include "Property.h"
 #include <iostream>
 #include <vector> 
@@ -24,7 +23,7 @@ private:
     //Recupero esito del primo tiro di dadi()
     int getInitTurn(){return initTurn;}
     //mossa pedina e aggiunta gold per passaggio al via
-    void move(int steps, const Board& board);
+    void move(int steps);
     //pagamento affitto casella
     void payPlayer(const Player& propertyOwner, int rentAmount);
     //check gold disponibile
@@ -32,7 +31,8 @@ private:
 
 public:
     Player(char playerName, bool human);
-
+    // Costruttore di copia
+    Player(const Player& other);
     //turno del giocatore
     void takeTurn(const Board& board);
 };
