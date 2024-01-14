@@ -2,7 +2,6 @@
 #define PLAYER_H
 
 #include "Property.h"
-#include "Board.h"
 #include <iostream>
 #include <vector> 
 
@@ -33,7 +32,7 @@ public:
     // Costruttore di copia
     Player(const Player& other);
     //turno del giocatore
-    void takeTurn(Board& board);
+    //void takeTurn(Board& board);
     void advance();
     char getName(){return name;}
     //Recupero esito del primo tiro di dadi()

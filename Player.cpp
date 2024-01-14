@@ -23,11 +23,6 @@ void Player::setPosition(int totalDiceResult) {
     move(totalDiceResult);
 }
 
-//restitutisce l'intero della posizione
-int Player::getPosition() {
-    return currentLocation;
-}
-
 //metodo pagamento affitto
 void Player::payPlayer(Player& propertyOwner, int rentAmount) {
     gold -= rentAmount;
