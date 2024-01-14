@@ -1,5 +1,11 @@
-#include "Property.h"
+/*
+File fatto da Francesca Damian
+In questo file si trovano tutti i metodi e il costruttore dell'oggetto 
+Casella aka Property.
+*/
 
+#include "Property.h"
+//I metodi di seguito servono soprattutto per gli altri file del progetto quando devono usare l'oggetto Casella
 	int Property::getCategory() {
 		return Category;
 	}
@@ -18,7 +24,7 @@
 	int Property::getStatus() {
 		return Status;
 	}
-
+//Il proprietario serve per impostarlo quando questo prende possesso di un nuovo territorio
 	Player Property::getOwner() {
 		if (owner == nullptr) throw "No owner for this land.";
 		return *owner;
@@ -29,7 +35,7 @@
 		Property::updateRentPrice();
 	}
 
-
+//Questo è il costruttore di Casella il commento in if sotto è ridondante dato che si sistema con default alla fine dello switch.
 	Property::Property(int newCategory) {
 		//if (Category > 3 || Category < 0) throw "Invalid category value.";
 		switch (newCategory)
@@ -67,12 +73,14 @@
 			break;
 		}
 	}
+//Metodo per comprare un terreno.
 	void Property::buyLand(Player *newOwner) {
 		if (Category == 3) { throw "Nothing to buy over here."; }
 		Status = 1;
 		owner = newOwner;
 		updateRentPrice();
 	}
+//Metodo per comprare una casa
 	void Property::buyHouse() {
 		if (Category == 3) { throw "Nothing to buy over here."; }
 		if (true) {
@@ -80,11 +88,8 @@
 			updateRentPrice();
 		}
 	}
-	
-	//bisognerebbe controllare che in tutti i buy io non abbia gia lo stesso status... cioe
-	//se compro una casa devo controllare anche che io non l abbia gia comprata, uguale per albergo e terreno
-
-	 //devi controllare che abbia prima comprato una casa
+//Non si controlla nei metodi buyHouse() o buyHotel() se chi compra è lo stesso proprietario del terreno perchè lo si fa in player.
+//Metodo per comprare un hotel
 	void Property::buyHotel() {
 		if (Category == 3) { throw "Nothing to buy over here."; }
 		if (true) {
@@ -92,17 +97,13 @@
 			updateRentPrice();
 		}
 	}
+//Metodo per impostare le caselle di proprietà di giocatori morti di nuovo vacanti
 	void Property::ripPlayer() {
 		Status = 0;
 		owner = nullptr;
 		updateRentPrice();
 	}
-
-	//print
-	//devi fare l overload dell ostrem ....
-
-
-	//Player owner;
+//Metodo per quando si compra una casa o un hotel di un dato terreno si cambia il valore dell'affitto.
 	void Property::updateRentPrice() {
 		switch (getStatus())
 		{
@@ -126,17 +127,7 @@
 			break;
 		}
 	}
-	/*
-	std::ostream& operator<<(std::ostream& output, const Property& P) {
-		output << "Categoria casella: ";
-		if (P.Category == 0) { output << "Casella Economica"; };
-		if (P.Category == 1) { output << "Casella Standard"; };
-		if (P.Category == 2) { output << "Casella Lusso"; };
-		if (P.Category == 3) { output << "Casella Angolare"; return output; };
-		output 	<< "  Prezzo affitto: " << P.RentPrice << "  Prezzo Terreno: " << P.BuyPrice << "  Prezzo casa: " << P.HousePrice << "  Prezzo Albergo: " << P.HotelPrice << "  Stato casella: " << P.Status;
-		return output;
-	}
-	*/
+//Print per aiutare a fare la board grafica.
 	std::ostream& operator<<(std::ostream& output, const Property& Pr) {
 		if (Pr.Category == 0) { output << "E";
 			switch (Pr.Status) {
