@@ -31,6 +31,7 @@
 
 
 	Property::Property(int newCategory) {
+		//if (Category > 3 || Category < 0) throw "Invalid category value.";
 		switch (newCategory)
 		{
 		case 0:
@@ -80,7 +81,10 @@
 		}
 	}
 	
-//devo finire il controllo del proprietario della casella
+	//bisognerebbe controllare che in tutti i buy io non abbia gia lo stesso status... cioe
+	//se compro una casa devo controllare anche che io non l abbia gia comprata, uguale per albergo e terreno
+
+	 //devi controllare che abbia prima comprato una casa
 	void Property::buyHotel() {
 		if (Category == 3) { throw "Nothing to buy over here."; }
 		if (true) {
@@ -94,8 +98,13 @@
 		updateRentPrice();
 	}
 
+	//print
+	//devi fare l overload dell ostrem ....
+
+
+	//Player owner;
 	void Property::updateRentPrice() {
-		switch (Status)
+		switch (getStatus())
 		{
 		case 0:
 		case 1:
@@ -116,10 +125,8 @@
 		default:
 			break;
 		}
-
-
 	}
-
+	/*
 	std::ostream& operator<<(std::ostream& output, const Property& P) {
 		output << "Categoria casella: ";
 		if (P.Category == 0) { output << "Casella Economica"; };
@@ -127,5 +134,37 @@
 		if (P.Category == 2) { output << "Casella Lusso"; };
 		if (P.Category == 3) { output << "Casella Angolare"; return output; };
 		output 	<< "  Prezzo affitto: " << P.RentPrice << "  Prezzo Terreno: " << P.BuyPrice << "  Prezzo casa: " << P.HousePrice << "  Prezzo Albergo: " << P.HotelPrice << "  Stato casella: " << P.Status;
+		return output;
+	}
+	*/
+	std::ostream& operator<<(std::ostream& output, const Property& Pr) {
+		if (Pr.Category == 0) { output << "E";
+			switch (Pr.Status) {
+				case 0: break;
+				case 1: break;
+				case 2: output << "*"; break;
+				case 3: output << "^"; break;
+				default: break;
+			}
+		};
+		if (Pr.Category == 1) {output << "S";
+			switch (Pr.Status){
+				case 0: break;
+				case 1: break;
+				case 2: output << "*"; break;
+				case 3: output << "^"; break;
+				default: break;
+			}
+		};
+		if (Pr.Category == 2) { output << "L";
+			switch (Pr.Status) {
+				case 0: break;
+				case 1: break;
+				case 2: output << "*"; break;
+				case 3: output << "^"; break;
+			default: break;
+			}
+		};
+		if (Pr.Category == 3) { output << " "; return output; }; 
 		return output;
 	}
