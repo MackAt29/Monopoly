@@ -20,7 +20,12 @@
 	}
 
 	Player* Property::getOwner() {
-		if (owner == nullptr) throw "No owner for this land.";
+		std::cout<<"Ciaoo\n";
+		if (owner == nullptr) {
+			std::cout<<"Ciaoo\n";
+			//throw "No owner for this land.";
+		}
+		std::cout<<"Ciaoo\n";
 		return owner;
 	}
 
