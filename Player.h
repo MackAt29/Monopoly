@@ -6,6 +6,8 @@
 #include <vector>
 //#include "property.h"  // Includi la definizione della classe Property (probabilmente sarà casella)
 
+class Property;
+
 class Player {
 public:
     char name;
