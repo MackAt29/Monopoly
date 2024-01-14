@@ -1,15 +1,3 @@
-﻿/*Casella:{
-const int category; (0-1-2) economica-standard-lusso
-const int tPrice; Costo della casella per l’acquisto (6-10-20 fiorini in base alla categoria)
-const int hPrice; Costo per costruire la Casa=Costo per costruire l’albergo (3-5-10 fiorini in base alla categoria)
-const int upPrice; Costo per costruire l’albergo (3-5-10 fiorini in base alla categoria)
-int stayCost=0; Costo quando un giocatore non proprietario si ferma sulla casella (non è const perchè durante la partita il valore aumenta)
-int status = 0; (0-1-2-3) vuota-acquistata-casa-albergo
-&Pedina owner; a chi appartiene la casella (se è stata acquistata)
-array &Pedina occupied[]; array di quanti giocatori sono attualmente in questa casella, una idea su come segnare se e quali player ci sono.
-metodo Print(): mostra in output (category + status + occupied[](mostra i giocatori presenti, altrimenti null quindi lascia vuoto)
-}
-*/
 #include "Property.h"
 
 	int Property::getCategory() {
@@ -29,6 +17,11 @@ metodo Print(): mostra in output (category + status + occupied[](mostra i giocat
 	}
 	int Property::getStatus() {
 		return Status;
+	}
+
+	Player Property::getOwner() {
+		if (owner == nullptr) throw "No owner for this land.";
+		return *owner;
 	}
 
 	void Property::setStatus(int newStatus) {
@@ -74,40 +67,44 @@ metodo Print(): mostra in output (category + status + occupied[](mostra i giocat
 			break;
 		}
 	}
-	void Property::buyLand() {
+	void Property::buyLand(Player *newOwner) {
 		if (Category == 3) { throw "Nothing to buy over here."; }
 		Status = 1;
+		owner = newOwner;
 		updateRentPrice();
 	}
 	void Property::buyHouse() {
 		if (Category == 3) { throw "Nothing to buy over here."; }
-		Status = 2;
-		updateRentPrice();
+		if (true) {
+			Status = 2;
+			updateRentPrice();
+		}
 	}
 	
 	//bisognerebbe controllare che in tutti i buy io non abbia gia lo stesso status... cioe
 	//se compro una casa devo controllare anche che io non l abbia gia comprata, uguale per albergo e terreno
 
-	//devo controllare che abbia prima comprato una casa
+	 //devi controllare che abbia prima comprato una casa
 	void Property::buyHotel() {
 		if (Category == 3) { throw "Nothing to buy over here."; }
-		Status = 3;
-		updateRentPrice();
+		if (true) {
+			Status = 3;
+			updateRentPrice();
+		}
 	}
 	void Property::ripPlayer() {
 		Status = 0;
+		owner = nullptr;
 		updateRentPrice();
 	}
 
 	//print
-	//devo fare l overload dell ostrem ....
+	//devi fare l overload dell ostrem ....
 
 
 	//Player owner;
-
-
 	void Property::updateRentPrice() {
-		switch (Status)
+		switch (getStatus())
 		{
 		case 0:
 		case 1:
@@ -129,4 +126,45 @@ metodo Print(): mostra in output (category + status + occupied[](mostra i giocat
 			break;
 		}
 	}
-
+	/*
+	std::ostream& operator<<(std::ostream& output, const Property& P) {
+		output << "Categoria casella: ";
+		if (P.Category == 0) { output << "Casella Economica"; };
+		if (P.Category == 1) { output << "Casella Standard"; };
+		if (P.Category == 2) { output << "Casella Lusso"; };
+		if (P.Category == 3) { output << "Casella Angolare"; return output; };
+		output 	<< "  Prezzo affitto: " << P.RentPrice << "  Prezzo Terreno: " << P.BuyPrice << "  Prezzo casa: " << P.HousePrice << "  Prezzo Albergo: " << P.HotelPrice << "  Stato casella: " << P.Status;
+		return output;
+	}
+	*/
+	std::ostream& operator<<(std::ostream& output, const Property& Pr) {
+		if (Pr.Category == 0) { output << "E";
+			switch (Pr.Status) {
+				case 0: break;
+				case 1: break;
+				case 2: output << "*"; break;
+				case 3: output << "^"; break;
+				default: break;
+			}
+		};
+		if (Pr.Category == 1) {output << "S";
+			switch (Pr.Status){
+				case 0: break;
+				case 1: break;
+				case 2: output << "*"; break;
+				case 3: output << "^"; break;
+				default: break;
+			}
+		};
+		if (Pr.Category == 2) { output << "L";
+			switch (Pr.Status) {
+				case 0: break;
+				case 1: break;
+				case 2: output << "*"; break;
+				case 3: output << "^"; break;
+			default: break;
+			}
+		};
+		if (Pr.Category == 3) { output << " "; return output; }; 
+		return output;
+	}
