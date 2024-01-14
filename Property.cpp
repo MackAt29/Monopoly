@@ -31,7 +31,6 @@
 
 
 	Property::Property(int newCategory) {
-		//if (Category > 3 || Category < 0) throw "Invalid category value.";
 		switch (newCategory)
 		{
 		case 0:
@@ -75,18 +74,19 @@
 	}
 	void Property::buyHouse() {
 		if (Category == 3) { throw "Nothing to buy over here."; }
-		Status = 2;
-		updateRentPrice();
+		if (true) {
+			Status = 2;
+			updateRentPrice();
+		}
 	}
 	
-	//bisognerebbe controllare che in tutti i buy io non abbia gia lo stesso status... cioe
-	//se compro una casa devo controllare anche che io non l abbia gia comprata, uguale per albergo e terreno
-
-	 //devi controllare che abbia prima comprato una casa
+//devo finire il controllo del proprietario della casella
 	void Property::buyHotel() {
 		if (Category == 3) { throw "Nothing to buy over here."; }
-		Status = 3;
-		updateRentPrice();
+		if (true) {
+			Status = 3;
+			updateRentPrice();
+		}
 	}
 	void Property::ripPlayer() {
 		Status = 0;
@@ -94,11 +94,6 @@
 		updateRentPrice();
 	}
 
-	//print
-	//devi fare l overload dell ostrem ....
-
-
-	//Player owner;
 	void Property::updateRentPrice() {
 		switch (Status)
 		{
@@ -121,5 +116,16 @@
 		default:
 			break;
 		}
+
+
 	}
 
+	std::ostream& operator<<(std::ostream& output, const Property& P) {
+		output << "Categoria casella: ";
+		if (P.Category == 0) { output << "Casella Economica"; };
+		if (P.Category == 1) { output << "Casella Standard"; };
+		if (P.Category == 2) { output << "Casella Lusso"; };
+		if (P.Category == 3) { output << "Casella Angolare"; return output; };
+		output 	<< "  Prezzo affitto: " << P.RentPrice << "  Prezzo Terreno: " << P.BuyPrice << "  Prezzo casa: " << P.HousePrice << "  Prezzo Albergo: " << P.HotelPrice << "  Stato casella: " << P.Status;
+		return output;
+	}
