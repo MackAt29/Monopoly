@@ -22,6 +22,7 @@ class Board {
 
 	private:
 		char v_[28];		// Board = array di 28 elementi
+		
 };
 
 #endif // Board_h

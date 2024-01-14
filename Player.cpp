@@ -3,13 +3,14 @@
 Player::Player(const char& playerName, bool human)
     : name(playerName), isHuman(human), gold(100), currentLocation(0), HasLost(false), initTurn(getDiceRoll()) {}
 
+// Costruttore di copia
+Player::Player(const Player& other) : name(other.name), isHuman(other.isHuman), gold(100), currentLocation(0), HasLost(false), initTurn(other.initTurn) {}
+
 //Potrebbe essere superfluo in caso decidiamo di mostrare gli esiti dei singoli dadi
 int Player::getDiceRoll() {
     int diceResult1 = rollDice();
     int diceResult2 = rollDice();
     int totalDiceResult = diceResult1 + diceResult2;
-
-    std::cout << "Rolled " << diceResult1 << " and " << diceResult2 << ". Total: " << totalDiceResult << std::endl;
     return totalDiceResult;
 }
 

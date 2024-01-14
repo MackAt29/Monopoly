@@ -1,41 +1,75 @@
 #include "Board.h"
-#include "player.h"
+#include "Player.h"
+#include "Property.h"
 #include <iostream>
 #include <vector>
 
 int main(int argc, char** argv) {
     std::srand ( unsigned ( std::time(0) ) );
-    std::vector<char> rounds;
+
+    std::vector<Player> placeHolder;
+    std::vector<Player> rounds;
+    bool timelimit = false;
+    int turnLimit = 10;
 
     //Ricevitore di argomento da prompt di comando per la struttura di partecipazione al gioco (aka. Se gioca anche l'utente oppure no)
-    if(argv[1] == std::string("computer"))
-        rounds = {'1', '2', '3', '4'};
-    else if(argv[1] == std::string("human"))
-        rounds = {'1', '2', '3', 'H'};
-
-    //REQUIRED: Metodo del Player per il tiro di dado, così da decidere l'ordine di gioco
+    if(argv[1] == std::string("computer")){
+        std::cout<<"Hai selezionato partita 4 CPU\n"<<std::endl;
+        timelimit=true;
+        placeHolder = {Player('1', false), Player('2', false), Player('3', false), Player('4', false)};
+    }
+    else if(argv[1] == std::string("human")){
+        std::cout<<"Hai selezionato partita Umano vs 3 CPU\n"<<std::endl;
+        std::cout<<"--==Tu sei il giocatore 1==--\n"<<std::endl;
+        placeHolder = {Player('1', true), Player('2', false), Player('3', false), Player('4', false)};
+    }
+    for (int i = 0; i < 4; ++i) {
+        std::cout << "P"<<i+1<<" rolled: " << placeHolder[i].initTurn<<std::endl;
+    }
     
-    std::vector<char>::iterator p = rounds.begin();
+    //Ciclo di Ordinamento dei turni in base al tiro di Dadi
+    for (int i = 0; i < 4; ++i) {
+        int maxIndex = 0;
 
+        // Trova l'indice del massimo elemento nel resto del vettore
+        for (int j = 0; j < placeHolder.size(); ++j) {
+            if (placeHolder[j].initTurn > placeHolder[maxIndex].initTurn) {
+                maxIndex = j;
+            }
+        }
+        // Scambia l'elemento corrente con il massimo trovato
+        rounds.push_back(placeHolder[maxIndex]);
+        placeHolder.erase(placeHolder.begin() + maxIndex);
+    }
+    std::cout<<"Ordine dei turni: ";
+    for (int i = 0; i < 4; ++i) {
+        std::cout<<"P"<<rounds[i].name<<" ";
+    }
+    std::cout<<std::endl;
+    
+    //Per prima cosa devo creare la board di gioco
+    Board game;
+    game.showBoard();
+
+    std::vector<Player>::iterator p = rounds.begin();
     // Ciclo durata partita
-    std::cout << "Sto puntando: " << *p << std::endl;
-    while (rounds.size() > 1) {
+    while (rounds.size() > 1 && turnLimit>0) {
         //REQUIRED: Player Turn
         for(int i = 0; i<rounds.size();++i){
             //REQUIRED: Metodi del turno del giocatore
 
             //REQUIRED: if(Player[i].getGold<=0) p=rounds.erase(p);
         }
+
         //TEMP: Rimozione dell'elemento puntato
-        std::cout << "Rimosso: " << *p << std::endl;
         p=rounds.erase(p);
+        std::cout << "\nHo rimosso un player";
+        if(timelimit) turnLimit--;
     }
-    
-    //Per prima cosa devo creare la board di gioco
-    Board game;
-    game.showBoard();
+    std::cout<<std::endl;
 
-
-    std::cout << "Il vincitore della partita e': " << *p << std::endl;
+    if(rounds.size()==1)
+        std::cout << "Il vincitore della partita e': P" << rounds[0].name << std::endl;
+    //REQUIRED: ELSE IF partita conclusa per tempo scaduto, metodo di ricerca GOLD maggiore
     return 0;
 }

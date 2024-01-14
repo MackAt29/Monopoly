@@ -15,10 +15,6 @@ Board::Board(){
         this->v_[i] = a[j];
         ++j;
     }
-    for (int i = 0; i < 28; ++i) {
-        std::cout<<this->v_[i] ;
-    }
-    std::cout<<std::endl;
 
 }
 

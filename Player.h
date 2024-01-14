@@ -16,9 +16,11 @@ public:
     int currentLocation;
     int initTurn;
     bool HasLost; // Flag per indicare se il giocatore ha perso
-    const int boardSize = 28;
+    int boardSize = 28;
 
     Player(const char& playerName, bool human);
+    // Costruttore di copia
+    Player(const Player& other);
 
     //metodo per la scelta del turno
     int getDiceRoll();
