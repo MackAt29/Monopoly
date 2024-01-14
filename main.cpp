@@ -14,12 +14,12 @@ int main(int argc, char** argv) {
 
     //Ricevitore di argomento da prompt di comando per la struttura di partecipazione al gioco (aka. Se gioca anche l'utente oppure no)
     if(argv[1] == std::string("computer")){
-        std::cout<<"Hai selezionato partita 4 CPU\n"<<std::endl;
+        std::cout<<"Hai selezionato partita partite con 4 giocatori computer\n"<<std::endl;
         timelimit=true;
         placeHolder = {Player('1', false), Player('2', false), Player('3', false), Player('4', false)};
     }
     else if(argv[1] == std::string("human")){
-        std::cout<<"Hai selezionato partita Umano vs 3 CPU\n"<<std::endl;
+        std::cout<<"Hai selezionato partita partite 3 giocatori computer e un giocatore umano\n"<<std::endl;
         std::cout<<"--==Tu sei il giocatore 1==--\n"<<std::endl;
         placeHolder = {Player('1', true), Player('2', false), Player('3', false), Player('4', false)};
     }
@@ -59,6 +59,8 @@ int main(int argc, char** argv) {
             //REQUIRED: Metodi del turno del giocatore
 
             //REQUIRED: if(Player[i].getGold<=0) p=rounds.erase(p);
+
+            //REQUIRED: Salvare ogni evento su un file LOG
         }
 
         //TEMP: Rimozione dell'elemento puntato

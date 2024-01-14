@@ -27,6 +27,7 @@ Board::Board(int elem){
 }
 
 void Board::showBoard(){
+    //REQUIRED: fare in modo che appaiano anche le posizioni dei player e v_ vettore di caselle
     std::cout<<"     1     2     3     4     5     6     7     8     "<<std::endl;
     std::cout<<"A  | "<<v_[0]<<" | | "<<v_[1]<<" | | "<<v_[2]<<" | | "<<v_[3]<<" | | "<<v_[4]<<" | | "<<v_[5]<<" | | "<<v_[6]<<" | | "<<v_[7]<<" |"<<std::endl;
     std::cout<<"C  | "<<v_[27]<<" |                                     | "<<v_[8]<<" |"<<std::endl;
