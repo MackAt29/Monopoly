@@ -54,7 +54,6 @@ void Player::takeTurn() {
 
     if (v[currentLocation].owner != nullptr){
         payPlayer(*(v[currentLocation].owner), v[currentLocation].RentPrice);
-    }
     } else {
         if (isHuman) {
             char choice;
