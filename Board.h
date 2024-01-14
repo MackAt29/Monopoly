@@ -16,9 +16,8 @@ class Board {
 
 		Property& getCasella(int currentLocation);
 
-		void showBoard(const std::vector<Player>& players);
-
-
+		void showBoard(std::vector<Player>& players);
+		
 	private:
 		std::vector<Property> v_;
 		

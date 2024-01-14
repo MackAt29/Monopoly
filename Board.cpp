@@ -22,10 +22,10 @@ Property& Board::getCasella(int currentLocation){
     return v_[currentLocation];
 }
 
-void Board::showBoard(const std::vector<Player>& players){
+void Board::showBoard(std::vector<Player>& players){
     std::string a[28] = {"","","","","","","","","","","","","","","","","","","","","","","","","","",""};
     for(int i=0;i<players.size();++i){
-        a[players[i].currentLocation]=a[players[i].currentLocation] + players[i].name;
+        a[players[i].getPosition()]=a[players[i].getPosition()] + players[i].getName();
     }
 
     std::cout<<"\n     1     2     3     4     5     6     7     8     "<<std::endl;

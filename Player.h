@@ -2,8 +2,11 @@
 #define PLAYER_H
 
 #include "Property.h"
+#include "Board.h"
 #include <iostream>
 #include <vector> 
+
+class Property;
 
 class Player {
 private:
@@ -18,23 +21,25 @@ private:
     int getDiceRoll();
     //settaggio della posizione del giocatore
     void setPosition(int diceResult);
-    //recupero posizione del giocatore
-    int getPosition(){return currentLocation;}
-    //Recupero esito del primo tiro di dadi()
-    int getInitTurn(){return initTurn;}
     //mossa pedina e aggiunta gold per passaggio al via
     void move(int steps);
     //pagamento affitto casella
-    void payPlayer(const Player& propertyOwner, int rentAmount);
+    void payPlayer(Player& propertyOwner, int rentAmount);
     //check gold disponibile
     bool checkBalance(int amount);
 
 public:
-    Player(char playerName, bool human);
+    Player(const char& playerName, bool human);
     // Costruttore di copia
     Player(const Player& other);
     //turno del giocatore
-    void takeTurn(const Board& board);
+    void takeTurn(Board& board);
+    void advance();
+    char getName(){return name;}
+    //Recupero esito del primo tiro di dadi()
+    int getInitTurn(){return initTurn;}
+    //recupero posizione del giocatore
+    int getPosition(){return currentLocation;}
 };
 
 #endif  // PLAYER_H

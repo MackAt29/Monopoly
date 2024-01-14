@@ -3,12 +3,12 @@
 #include <cstdlib>
 
 Player::Player(const char& playerName, bool human)
-    : name(playerName), isHuman(human), gold(100), currentLocation(0), HasLost(false), initTurn(getDiceRoll()) {}
+    : name(playerName), isHuman(human), gold(100), currentLocation(0), hasLost(false), initTurn(getDiceRoll()) {}
 
 // Costruttore di copia
-Player::Player(const Player& other) : name(other.name), isHuman(other.isHuman), gold(100), currentLocation(0), HasLost(false), initTurn(other.initTurn) {}
+Player::Player(const Player& other) : name(other.name), isHuman(other.isHuman), gold(100), currentLocation(0), hasLost(false), initTurn(other.initTurn) {}
 
-//lancio dadi
+//lancio dadiS
 int Player::getDiceRoll() {
     int dice1 = (rand() % 6) + 1;
     int dice2 = (rand() % 6) + 1;
@@ -24,12 +24,12 @@ void Player::setPosition(int totalDiceResult) {
 }
 
 //restitutisce l'intero della posizione
-int Player::getPosition() const {
+int Player::getPosition() {
     return currentLocation;
 }
 
 //metodo pagamento affitto
-void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
+void Player::payPlayer(Player& propertyOwner, int rentAmount) {
     gold -= rentAmount;
     propertyOwner.gold += rentAmount;
 
@@ -42,8 +42,15 @@ void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
     }
 }
 
-//metodo turno player
-void Player::takeTurn() {
+void Player::advance() {
+    //In questo modo mostra: Nome's turn: (metodo di tiro dei dadi + output dei risultati)
+    std::cout << name << "'s turn: ";
+    int totalDiceResult =getDiceRoll();
+    setPosition(totalDiceResult);
+}
+
+/*metodo turno player
+void Player::takeTurn(Board& board) {
     //int totalDiceResult = getDiceRoll();
     //std::cout << name << "'s turn: Rolled " << totalDiceResult << std::endl;   
     
@@ -51,11 +58,10 @@ void Player::takeTurn() {
     std::cout << name << "'s turn: ";
     int totalDiceResult =getDiceRoll();
     setPosition(totalDiceResult);
-
     if (v[currentLocation].owner != nullptr){
         payPlayer(*(v[currentLocation].owner), v[currentLocation].RentPrice);
     }
-    } else {
+    else {
         if (isHuman) {
             char choice;
             std::cout << "Vuoi comprare questa casella? [S/N]: ";
@@ -85,7 +91,7 @@ void Player::takeTurn() {
         }
     }
 }
-
+*/
 //mossa della pedina
 void Player::move(int steps) {
     //calcola nuova posizione dopo lancio dadi
@@ -115,8 +121,3 @@ bool Player::checkBalance(int amount) {
     std::cout << "What do you want to do?" << std::endl;
     // Implementa le azioni disponibili, ad esempio acquisto di proprietà, costruzione di edifici, ecc.
 }*/
-void Player::humanChoice() {
-    // Logica per la scelta del giocatore umano
-    std::cout << "What do you want to do?" << std::endl;
-    // Implementa le azioni disponibili, ad esempio acquisto di proprietà, costruzione di edifici, ecc.
-}

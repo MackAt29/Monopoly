@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
         placeHolder = {Player('1', true), Player('2', false), Player('3', false), Player('4', false)};
     }
     for (int i = 0; i < 4; ++i) {
-        std::cout << "P"<<i+1<<" rolled: " << placeHolder[i].initTurn<<std::endl;
+        std::cout << "P"<<i+1<<" rolled: " << placeHolder[i].getInitTurn()<<std::endl;
     }
     
     //Ciclo di Ordinamento dei turni in base al tiro di Dadi
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
 
         // Trova l'indice del massimo elemento nel resto del vettore
         for (int j = 0; j < placeHolder.size(); ++j) {
-            if (placeHolder[j].initTurn > placeHolder[maxIndex].initTurn) {
+            if (placeHolder[j].getInitTurn() > placeHolder[maxIndex].getInitTurn()) {
                 maxIndex = j;
             }
         }
@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
     }
     std::cout<<"Ordine dei turni: ";
     for (int i = 0; i < 4; ++i) {
-        std::cout<<"P"<<rounds[i].name<<" ";
+        std::cout<<"P"<<rounds[i].getName()<<" ";
     }
     std::cout<<std::endl;
     
@@ -60,13 +60,12 @@ int main(int argc, char** argv) {
             //REQUIRED: Metodi del turno del giocatore
             rounds[i].advance();
             game.showBoard(rounds);
+            /*
             Property& casella = game.getCasella(rounds[i].currentLocation);
             if (casella.getOwner() != nullptr && casella.getOwner() != &rounds[i]) {
                 rounds[i].payPlayer(casella.getOwner(), casella.getRentPrice());
             }
-            
-            //
-
+            */
             //REQUIRED "show": visualizzare il tabellone
             //visualizzare lista terreni/case/alberghi posseduti da ogni giocatore
             //visualizzare l’ammontare di fiorini posseduto da tutti i giocatori
@@ -86,7 +85,7 @@ int main(int argc, char** argv) {
     std::cout<<std::endl;
 
     if(rounds.size()==1)
-        std::cout << "Il vincitore della partita e': P" << rounds[0].name << std::endl;
+        std::cout << "Il vincitore della partita e': P" << rounds[0].getName() << std::endl;
     //REQUIRED: ELSE IF partita conclusa per tempo scaduto, metodo di ricerca GOLD maggiore
     return 0;
 }
