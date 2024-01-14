@@ -111,7 +111,6 @@ Casella aka Property.
 //Metodo per quando si compra una casa o un hotel di un dato terreno si cambia il valore dell'affitto.
 	void Property::updateRentPrice() {
 		switch (getStatus())
-		switch (getStatus())
 		{
 		case 0:
 		case 1:

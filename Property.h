@@ -21,7 +21,7 @@ public:
 	int getHotelPrice();
 	int getRentPrice();
 	int getStatus();
-	Player getOwner();
+	Player* getOwner();
 	std::string getInfo();
 
 	void setStatus(int newStatus);
