@@ -50,18 +50,32 @@ int main(int argc, char** argv) {
     //Per prima cosa devo creare la board di gioco
     Board game;
     game.showBoard(rounds);
-
+    bool humanTurn = true;
+    bool cpuChoice = false;
     std::vector<Player>::iterator p = rounds.begin();
     // Ciclo durata partita
     while (rounds.size() > 1 && turnLimit>0) {
         //REQUIRED: Player Turn
         for(int i = 0; i<rounds.size();++i){
             //REQUIRED: Metodi del turno del giocatore
-            rounds.[i].takeTurn;
+            rounds[i].advance();
+            game.showBoard(rounds);
+            Property& casella = game.getCasella(rounds[i].currentLocation);
+            if (casella.getOwner() != nullptr && casella.getOwner() != &rounds[i]) {
+                rounds[i].payPlayer(casella.getOwner(), casella.getRentPrice());
+            }
+            
+            //
+
+            //REQUIRED "show": visualizzare il tabellone
+            //visualizzare lista terreni/case/alberghi posseduti da ogni giocatore
+            //visualizzare l’ammontare di fiorini posseduto da tutti i giocatori
+            
 
             //REQUIRED: if(Player[i].getGold<=0) p=rounds.erase(p);
 
             //REQUIRED: Salvare ogni evento su un file LOG
+            cpuChoice = false;
         }
 
         //TEMP: Rimozione dell'elemento puntato
