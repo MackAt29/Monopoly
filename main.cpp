@@ -76,6 +76,8 @@ int main(int argc, char** argv) {
                 else {
                     //GENERA INIZIALMENTE la scelta della CPU al 25%. Se l'utente di turno è umano, choice cambia a seconda della scelta dell'utente.
                     bool choice = (std::rand() % 100) < 25;
+                    if(!choice) std::cout<<"Random = falso"<<std::endl;
+                    else std::cout<<"Random = vero"<<std::endl;
                     
                     //Se la casella è libera, puoi comprarla
                     if(casella.getOwner() == nullptr){
@@ -93,10 +95,10 @@ int main(int argc, char** argv) {
                                     std::cin >> input;
 
                                     if (input == "Y" || input == "y") {
-                                        bool choice = true;
+                                        choice = true;
                                         humanTurn=false;
                                     } else if (input == "N" || input == "n") {
-                                        bool choice = false;
+                                        choice = false;
                                         humanTurn=false;
                                     } else if (input == "show") {
                                         game.showBoard(rounds);
@@ -134,10 +136,10 @@ int main(int argc, char** argv) {
                                 }
 
                                 if (input == "Y" || input == "y") {
-                                    bool choice = true;
+                                    choice = true;
                                     humanTurn=false;
                                 } else if (input == "N" || input == "n") {
-                                    bool choice = false;
+                                    choice = false;
                                     humanTurn=false;
                                 } else if (input == "show") {
                                     game.showBoard(rounds);
@@ -191,6 +193,5 @@ int main(int argc, char** argv) {
         }
         std::cout << "Il vincitore della partita per maggior quantita' di fiorini e': P" << rounds[c].getName() << std::endl;
     }
-    //REQUIRED: ELSE IF partita conclusa per tempo scaduto, metodo di ricerca GOLD maggiore
     return 0;
 }
