@@ -132,9 +132,10 @@ Casella aka Property.
 			break;
 		}
 	}
-//Print per aiutare a fare la board grafica.
+	//Print per aiutare a fare la board grafica.
 	std::ostream& operator<<(std::ostream& output, const Property& Pr) {
-		if (Pr.Category == 0) { output << "E";
+		if (Pr.Category == 0) { 
+			output << "E";
 			switch (Pr.Status) {
 				case 0: break;
 				case 1: break;
@@ -143,7 +144,8 @@ Casella aka Property.
 				default: break;
 			}
 		};
-		if (Pr.Category == 1) {output << "S";
+		if (Pr.Category == 1) {
+			output << "S";
 			switch (Pr.Status){
 				case 0: break;
 				case 1: break;
@@ -152,7 +154,8 @@ Casella aka Property.
 				default: break;
 			}
 		};
-		if (Pr.Category == 2) { output << "L";
+		if (Pr.Category == 2) { 
+			output << "L";
 			switch (Pr.Status) {
 				case 0: break;
 				case 1: break;
