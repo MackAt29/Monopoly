@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PROPERTY_H
+#define PROPERTY_H
+
 #include "Player.h"
 #include <ostream>
 #include <string>
@@ -46,3 +48,4 @@ private:
 	Player *owner = nullptr;
 	void updateRentPrice();
 };
+#ENDIF
