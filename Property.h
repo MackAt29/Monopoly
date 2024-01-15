@@ -13,11 +13,7 @@
 #define LUX_HOME 7;
 #define LUX_HOTEL 14;
 
-<<<<<<< HEAD
-class Property;
-=======
 class Player;
->>>>>>> 68c52fcc1ef578a9b1220e697eeb7768ec93b948
 
 class Property {
 public:
