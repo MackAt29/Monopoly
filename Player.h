@@ -1,9 +1,12 @@
+//Margherita Cattapan 2008798
 #ifndef PLAYER_H
 #define PLAYER_H
 
 #include "Property.h"
 #include <vector>
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <algorithm>    // std::random_shuffle
 #include <ctime>        // std::time
 #include <cstdlib>      // std::rand, std::srand
@@ -35,6 +38,8 @@ public:
     Player(const Player& other);
     //turno del giocatore
     //void takeTurn(Board& board);
+    //output su file
+    void logToFile(const std::string& message) const;
     void advance();
     char getName(){return name;}
     bool isHumanPlayer(){return isHuman;}
