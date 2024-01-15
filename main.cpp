@@ -218,10 +218,10 @@ int main(int argc, char** argv) {
     game.showBoard(rounds);
 
     //STEP 9.1: Se la partita è conclusa perché è rimasto un solo giocatore, stampa il vincitore.
-    if(rounds.size()==1)
+    if(rounds.size()==1){
         std::cout << "Il vincitore della partita e': P" << rounds[0].getName() << std::endl;
         rounds[0].logToFile("Il vincitore della partita e': P" + std::to_string(rounds[0].getName()));
-
+    }  
     //STEP 9.2: Se la partita era tra 4 CPU E sono passati 10 turni stampa il giocatore che aveva più fiorini alla fine della partita
     else {
         std::cout << "Tempo scaduto" << std::endl;
