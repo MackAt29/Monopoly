@@ -22,8 +22,6 @@ private:
     void setPosition(int diceResult);
     //mossa pedina e aggiunta gold per passaggio al via
     void move(int steps);
-    //pagamento affitto casella
-    void payPlayer(Player& propertyOwner, int rentAmount);
     //check gold disponibile
     bool checkBalance(int amount);
 
@@ -35,10 +33,16 @@ public:
     //void takeTurn(Board& board);
     void advance();
     char getName(){return name;}
+    bool isHumanPlayer(){return isHuman;}
     //Recupero esito del primo tiro di dadi()
     int getInitTurn(){return initTurn;}
+    //check gold player
+    int getGold(){return gold;}
+    void payProperty(int priceAmount);
     //recupero posizione del giocatore
     int getPosition(){return currentLocation;}
+    //pagamento affitto casella
+    void payPlayer(Player* propertyOwner, int rentAmount);
 };
 
 #endif  // PLAYER_H

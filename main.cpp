@@ -51,7 +51,6 @@ int main(int argc, char** argv) {
     Board game;
     game.showBoard(rounds);
     bool humanTurn = true;
-    bool cpuChoice = false;
     std::vector<Player>::iterator p = rounds.begin();
     // Ciclo durata partita
     while (rounds.size() > 1 && turnLimit>0) {
@@ -59,13 +58,82 @@ int main(int argc, char** argv) {
         for(int i = 0; i<rounds.size();++i){
             //REQUIRED: Metodi del turno del giocatore
             rounds[i].advance();
-            game.showBoard(rounds);
-            /*
-            Property& casella = game.getCasella(rounds[i].currentLocation);
+            
+            //REQUIRED: Se il giocatore arriva in una casella angolare, skippa tutto sto bordello di Dio
+            Property& casella = game.getCasella(rounds[i].getPosition());
             if (casella.getOwner() != nullptr && casella.getOwner() != &rounds[i]) {
                 rounds[i].payPlayer(casella.getOwner(), casella.getRentPrice());
+                //DOPO AVER PAGATO UN PLAYER, controlla se sei andato in bancarotta. Se si, vieni eliminato.
+                if(rounds[i].getGold()<=0){
+                    std::cout << "Giocatore " << rounds[i].getName() << " è stato eliminato" << std::endl;
+                    rounds.erase(rounds.begin() + i);
+                }
             }
-            */
+            else {
+                //GENERA INIZIALMENTE la scelta della CPU al 25%. Se l'utente di turno è umano, choice cambia a seconda della scelta dell'utente.
+                bool choice = (std::rand() % 100) <= 25;
+                
+                //Se la casella è libera, puoi comprarla
+                if(casella.getOwner() == nullptr){
+                    //BOT: Ha i soldi e si compra la casa
+                    //BOT: Ha i soldi, ma non si compra la casa
+                    //BOT: Non ha i soldi, quindi non si compra la casa
+                    if(rounds[i].getGold()<casella.getBuyPrice()){
+                        std::cout << "Giocatore " << rounds[i].getName() << " non ha abbastanza soldi per comprare la Casella nr. "<< rounds[i].getPosition() << std::endl;
+                    } else {
+                        if(rounds[i].isHumanPlayer()){
+                            while(humanTurn){
+                                std::cout<<"E' il tuo turno. \nVuoi comprare il terreno per "<<casella.getBuyPrice()<<" fiorini? [Y/N]"<<std::endl;
+                                std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
+                                std::string input;
+                                std::cin >> input;
+
+                                if (input == "Y" || input == "y") {
+                                    bool choice = true;
+                                    humanTurn=false;
+                                } else if (input == "N" || input == "n") {
+                                    bool choice = false;
+                                    humanTurn=false;
+                                } else if (input == "show") {
+                                    game.showBoard(rounds);
+                                } else {
+                                    std::cout << "Input non valido. Riprova." << std::endl;
+                                }
+                            }
+                            humanTurn=true;
+                        }
+                        if(choice){
+                            rounds[i].payProperty(casella.getBuyPrice());
+                            casella.buyLand(&rounds[i]);
+                        }
+                    }
+                }
+                else if(casella.getOwner() == &rounds[i]){
+                    if(rounds[i].isHumanPlayer()){
+                        while(humanTurn){
+                            std::cout<<"E' il tuo turno e sei arrivato su una tua casella. \nVuoi comprare il terreno per "<<casella.getBuyPrice()<<" fiorini? [Y/N]"<<std::endl;
+                            std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
+                            std::string input;
+                            std::cin >> input;
+
+                            if (input == "Y" || input == "y") {
+                                bool choice = true;
+                                humanTurn=false;
+                            } else if (input == "N" || input == "n") {
+                                bool choice = false;
+                                humanTurn=false;
+                            } else if (input == "show") {
+                                game.showBoard(rounds);
+                            } else {
+                                std::cout << "Input non valido. Riprova." << std::endl;
+                            }
+                        }
+                        humanTurn=true;
+                    }
+                }
+
+            }
+            
             //REQUIRED "show": visualizzare il tabellone
             //visualizzare lista terreni/case/alberghi posseduti da ogni giocatore
             //visualizzare l’ammontare di fiorini posseduto da tutti i giocatori
@@ -74,12 +142,11 @@ int main(int argc, char** argv) {
             //REQUIRED: if(Player[i].getGold<=0) p=rounds.erase(p);
 
             //REQUIRED: Salvare ogni evento su un file LOG
-            cpuChoice = false;
         }
 
         //TEMP: Rimozione dell'elemento puntato
         p=rounds.erase(p);
-        std::cout << "\nHo rimosso un player";
+        std::cout << " Ho rimosso un player"<<std::endl;
         if(timelimit) turnLimit--;
     }
     std::cout<<std::endl;

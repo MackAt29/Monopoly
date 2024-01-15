@@ -24,17 +24,20 @@ void Player::setPosition(int totalDiceResult) {
 }
 
 //metodo pagamento affitto
-void Player::payPlayer(Player& propertyOwner, int rentAmount) {
+void Player::payPlayer(Player* propertyOwner, int rentAmount) {
     gold -= rentAmount;
-    propertyOwner.gold += rentAmount;
+    propertyOwner->gold += rentAmount;
 
-    std::cout << name << " paid rent of " << rentAmount << " to " << propertyOwner.name
-        << ". Remaining gold: " << gold << std::endl;
+    std::cout << name << " paid rent of " << rentAmount << " to " << propertyOwner->name << ". Remaining gold: " << gold << std::endl;
 
     if (checkBalance(0)) {
         hasLost = true;
         std::cout << name << " has lost the game!" << std::endl;
     }
+}
+
+void Player::payProperty(int priceAmount){
+    gold -= priceAmount;
 }
 
 void Player::advance() {
