@@ -153,6 +153,7 @@ int main(int argc, char** argv) {
                     else if(casella.getOwner() == &rounds[i]){
                         //COME PRIMA, se sei un UMANO, la scelta avviene per inserimento
                         if(rounds[i].isHumanPlayer()){
+                            int abort = 0;
                             while(humanTurn){
                                 std::cout<<"E' il tuo turno e sei arrivato su una tua casella."<<std::endl;
                                 std::string input;
@@ -180,6 +181,13 @@ int main(int argc, char** argv) {
                                 } else {
                                     std::cout << "Input non valido. Riprova." << std::endl;
                                     std::cin >> input;
+                                    abort++;
+                                    //Ci sono casi in cui il gioco si blocca. Quando non l'input inserito è incorretto per 3 volte, salta il turno
+                                    if(abort==3) {
+                                        humanTurn=false;
+                                        std::cout<<"Invalid Input too many times. Abort!"<<std::endl;
+                                    }
+                                
                                 }
                             }
                             humanTurn=true;
