@@ -47,6 +47,16 @@ void Player::advance() {
     setPosition(totalDiceResult);
 }
 
+void Player::acquireProperty(Property& land){
+    ownList_.push_back(land);
+}
+
+void Player::getOwnedList(){
+    for(int i=0;i<ownList_.size();++i){
+        std::cout<<ownList_[i]<< ", ";
+    }
+}
+
 /*metodo turno player
 void Player::takeTurn(Board& board) {
     //int totalDiceResult = getDiceRoll();

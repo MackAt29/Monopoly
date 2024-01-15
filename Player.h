@@ -2,8 +2,11 @@
 #define PLAYER_H
 
 #include "Property.h"
+#include <vector>
 #include <iostream>
-#include <vector> 
+#include <algorithm>    // std::random_shuffle
+#include <ctime>        // std::time
+#include <cstdlib>      // std::rand, std::srand
 
 class Property;
 
@@ -15,6 +18,7 @@ private:
     int currentLocation;
     bool hasLost;
     int initTurn;
+    std::vector<Property> ownList_;
 
     //lancio dadi
     int getDiceRoll();
@@ -39,10 +43,12 @@ public:
     //check gold player
     int getGold(){return gold;}
     void payProperty(int priceAmount);
+    void acquireProperty(Property& land);
     //recupero posizione del giocatore
     int getPosition(){return currentLocation;}
     //pagamento affitto casella
     void payPlayer(Player* propertyOwner, int rentAmount);
+    void getOwnedList();
 };
 
 #endif  // PLAYER_H

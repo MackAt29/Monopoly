@@ -23,6 +23,7 @@ public:
 	int getHotelPrice();
 	int getRentPrice();
 	int getStatus();
+	int position;
 	Player* getOwner();
 	std::string getInfo();
 
@@ -30,7 +31,7 @@ public:
 
 	void buyHouse();
 	void buyHotel();
-	Property(int newCategory);
+	Property(int newCategory, int numberPosition);
 	void buyLand(Player *newOwner);
 	void ripPlayer();
 

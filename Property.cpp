@@ -39,7 +39,7 @@ Casella aka Property.
 	}
 
 //Questo è il costruttore di Casella il commento in if sotto è ridondante dato che si sistema con default alla fine dello switch.
-	Property::Property(int newCategory) {
+	Property::Property(int newCategory, int numberPosition) : position(numberPosition) {
 		//if (Category > 3 || Category < 0) throw "Invalid category value.";
 		switch (newCategory)
 		{
