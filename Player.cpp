@@ -104,6 +104,12 @@ void Player::takeTurn(Board& board) {
 void Player::move(int steps) {
     //calcola nuova posizione dopo lancio dadi
     int newPosition = (currentLocation + steps) % 28;
+    
+    // Se il giocatore è andato oltre il bordo del vettore delle caselle, aggiungi 20 al saldo
+    if (newPosition < currentLocation) {
+        gold += 20;
+        std::cout << name << " passed the starting position and earned 20 gold. New balance: " << gold << std::endl;
+    }
     // Aggiorna currentLocation in base alla nuova posizione
     currentLocation = newPosition;
     std::cout << name << " moved " << steps << " steps. New position: " << currentLocation+1 << std::endl;

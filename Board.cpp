@@ -1,3 +1,8 @@
+/*
+File fatto da Jonatan Ademi 2008796
+In questo file si trova la classe Board, ovvero il vector di Property 
+e il metodo che stampa tutte le informazioni della partita
+*/
 #include "Board.h"
 
 // Default constructor
