@@ -1,0 +1,101 @@
+1's turn: Rolled 4 and 3. Total: 7
+2's turn: Rolled 5 and 2. Total: 7
+3's turn: Rolled 4 and 1. Total: 5
+4's turn: Rolled 3 and 6. Total: 9
+4's turn: Rolled 1 and 3. Total: 4
+4 moved 4 steps. New position: 5
+Player 52 has bought Property nr. 5
+1's turn: Rolled 1 and 3. Total: 4
+1 moved 4 steps. New position: 5
+1 paid rent of 0 to 4. Remaining gold: 100
+2's turn: Rolled 5 and 2. Total: 7
+2 moved 7 steps. New position: 8
+3's turn: Rolled 2 and 3. Total: 5
+3 moved 5 steps. New position: 6
+Player 51 has bought Property nr. 6
+4's turn: Rolled 6 and 4. Total: 10
+4 moved 10 steps. New position: 15
+1's turn: Rolled 4 and 3. Total: 7
+1 moved 7 steps. New position: 12
+Player 49 has bought Property nr. 12
+2's turn: Rolled 4 and 3. Total: 7
+2 moved 7 steps. New position: 15
+3's turn: Rolled 5 and 6. Total: 11
+3 moved 11 steps. New position: 17
+4's turn: Rolled 5 and 5. Total: 10
+4 moved 10 steps. New position: 25
+Player 52 has bought Property nr. 25
+1's turn: Rolled 5 and 1. Total: 6
+1 moved 6 steps. New position: 18
+2's turn: Rolled 2 and 1. Total: 3
+2 moved 3 steps. New position: 18
+3's turn: Rolled 3 and 1. Total: 4
+3 moved 4 steps. New position: 21
+4's turn: Rolled 4 and 6. Total: 10
+4 moved 10 steps. New position: 7
+1's turn: Rolled 4 and 1. Total: 5
+1 moved 5 steps. New position: 23
+2's turn: Rolled 1 and 1. Total: 2
+2 moved 2 steps. New position: 20
+3's turn: Rolled 1 and 3. Total: 4
+3 moved 4 steps. New position: 25
+3 paid rent of 0 to 4. Remaining gold: 80
+4's turn: Rolled 5 and 5. Total: 10
+4 moved 10 steps. New position: 17
+1's turn: Rolled 5 and 1. Total: 6
+1 moved 6 steps. New position: 1
+2's turn: Rolled 2 and 5. Total: 7
+2 moved 7 steps. New position: 27
+Player 50 has bought Property nr. 27
+3's turn: Rolled 5 and 3. Total: 8
+3 moved 8 steps. New position: 5
+3 paid rent of 0 to 4. Remaining gold: 100
+4's turn: Rolled 6 and 2. Total: 8
+4 moved 8 steps. New position: 25
+1's turn: Rolled 1 and 5. Total: 6
+1 moved 6 steps. New position: 7
+Player 49 has bought Property nr. 7
+2's turn: Rolled 4 and 1. Total: 5
+2 moved 5 steps. New position: 4
+3's turn: Rolled 4 and 2. Total: 6
+3 moved 6 steps. New position: 11
+Player 51 has bought Property nr. 11
+4's turn: Rolled 1 and 6. Total: 7
+4 moved 7 steps. New position: 4
+1's turn: Rolled 5 and 2. Total: 7
+1 moved 7 steps. New position: 14
+2's turn: Rolled 4 and 2. Total: 6
+2 moved 6 steps. New position: 10
+3's turn: Rolled 1 and 2. Total: 3
+3 moved 3 steps. New position: 14
+4's turn: Rolled 4 and 1. Total: 5
+4 moved 5 steps. New position: 9
+1's turn: Rolled 4 and 4. Total: 8
+1 moved 8 steps. New position: 22
+2's turn: Rolled 5 and 3. Total: 8
+2 moved 8 steps. New position: 18
+Player 50 has bought Property nr. 18
+3's turn: Rolled 6 and 3. Total: 9
+3 moved 9 steps. New position: 23
+Player 51 has bought Property nr. 23
+4's turn: Rolled 2 and 6. Total: 8
+4 moved 8 steps. New position: 17
+Player 52 has bought Property nr. 17
+1's turn: Rolled 3 and 5. Total: 8
+1 moved 8 steps. New position: 2
+2's turn: Rolled 5 and 2. Total: 7
+2 moved 7 steps. New position: 25
+2 paid rent of 0 to 4. Remaining gold: 104
+3's turn: Rolled 4 and 1. Total: 5
+3 moved 5 steps. New position: 28
+Player 51 has bought Property nr. 28
+4's turn: Rolled 1 and 2. Total: 3
+4 moved 3 steps. New position: 20
+1's turn: Rolled 5 and 6. Total: 11
+1 moved 11 steps. New position: 13
+2's turn: Rolled 6 and 2. Total: 8
+2 moved 8 steps. New position: 5
+2 paid rent of 0 to 4. Remaining gold: 124
+3's turn: Rolled 4 and 6. Total: 10
+3 moved 10 steps. New position: 10
+The WINNER for the greatest amount of florins is: P1

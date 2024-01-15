@@ -1,0 +1,957 @@
+1's turn: Rolled 3 and 1. Total: 4
+2's turn: Rolled 1 and 3. Total: 4
+3's turn: Rolled 3 and 2. Total: 5
+4's turn: Rolled 6 and 4. Total: 10
+4's turn: Rolled 5 and 5. Total: 10
+4 moved 10 steps. New position: 11
+3's turn: Rolled 2 and 4. Total: 6
+3 moved 6 steps. New position: 7
+1's turn: Rolled 4 and 5. Total: 9
+1 moved 9 steps. New position: 10
+Player 49 has bought Property nr. 10
+2's turn: Rolled 5 and 6. Total: 11
+2 moved 11 steps. New position: 12
+4's turn: Rolled 6 and 1. Total: 7
+4 moved 7 steps. New position: 18
+3's turn: Rolled 4 and 1. Total: 5
+3 moved 5 steps. New position: 12
+1's turn: Rolled 4 and 6. Total: 10
+1 moved 10 steps. New position: 20
+2's turn: Rolled 3 and 6. Total: 9
+2 moved 9 steps. New position: 21
+4's turn: Rolled 2 and 6. Total: 8
+4 moved 8 steps. New position: 26
+Player 52 has bought Property nr. 26
+3's turn: Rolled 1 and 3. Total: 4
+3 moved 4 steps. New position: 16
+1's turn: Rolled 3 and 5. Total: 8
+1 moved 8 steps. New position: 28
+Player 49 has bought Property nr. 28
+2's turn: Rolled 2 and 5. Total: 7
+2 moved 7 steps. New position: 28
+2 paid rent of 0 to 1. Remaining gold: 100
+4's turn: Rolled 4 and 5. Total: 9
+4 moved 9 steps. New position: 7
+Player 52 has bought Property nr. 7
+3's turn: Rolled 2 and 4. Total: 6
+3 moved 6 steps. New position: 22
+1's turn: Rolled 1 and 6. Total: 7
+1 moved 7 steps. New position: 7
+1 paid rent of 0 to 4. Remaining gold: 94
+2's turn: Rolled 4 and 2. Total: 6
+2 moved 6 steps. New position: 6
+4's turn: Rolled 4 and 3. Total: 7
+4 moved 7 steps. New position: 14
+3's turn: Rolled 4 and 3. Total: 7
+3 moved 7 steps. New position: 1
+1's turn: Rolled 4 and 1. Total: 5
+1 moved 5 steps. New position: 12
+Player 49 has bought Property nr. 12
+2's turn: Rolled 3 and 6. Total: 9
+2 moved 9 steps. New position: 15
+4's turn: Rolled 3 and 3. Total: 6
+4 moved 6 steps. New position: 20
+Player 52 has bought Property nr. 20
+3's turn: Rolled 6 and 1. Total: 7
+3 moved 7 steps. New position: 8
+1's turn: Rolled 6 and 2. Total: 8
+1 moved 8 steps. New position: 20
+1 paid rent of 0 to 4. Remaining gold: 88
+2's turn: Rolled 3 and 5. Total: 8
+2 moved 8 steps. New position: 23
+4's turn: Rolled 6 and 2. Total: 8
+4 moved 8 steps. New position: 28
+4 paid rent of 0 to 1. Remaining gold: 98
+3's turn: Rolled 2 and 1. Total: 3
+3 moved 3 steps. New position: 11
+1's turn: Rolled 2 and 1. Total: 3
+1 moved 3 steps. New position: 23
+Player 49 has bought Property nr. 23
+2's turn: Rolled 2 and 1. Total: 3
+2 moved 3 steps. New position: 26
+2 paid rent of 0 to 4. Remaining gold: 120
+4's turn: Rolled 2 and 2. Total: 4
+4 moved 4 steps. New position: 4
+3's turn: Rolled 2 and 6. Total: 8
+3 moved 8 steps. New position: 19
+Player 51 has bought Property nr. 19
+1's turn: Rolled 3 and 4. Total: 7
+1 moved 7 steps. New position: 2
+Player 49 has bought Property nr. 2
+2's turn: Rolled 1 and 1. Total: 2
+2 moved 2 steps. New position: 28
+2 paid rent of 0 to 1. Remaining gold: 120
+4's turn: Rolled 4 and 4. Total: 8
+4 moved 8 steps. New position: 12
+4 paid rent of 0 to 1. Remaining gold: 118
+3's turn: Rolled 3 and 6. Total: 9
+3 moved 9 steps. New position: 28
+3 paid rent of 0 to 1. Remaining gold: 110
+1's turn: Rolled 3 and 2. Total: 5
+1 moved 5 steps. New position: 7
+1 paid rent of 0 to 4. Remaining gold: 88
+2's turn: Rolled 4 and 3. Total: 7
+2 moved 7 steps. New position: 7
+2 paid rent of 0 to 4. Remaining gold: 140
+4's turn: Rolled 6 and 1. Total: 7
+4 moved 7 steps. New position: 19
+4 paid rent of 0 to 3. Remaining gold: 118
+3's turn: Rolled 1 and 2. Total: 3
+3 moved 3 steps. New position: 3
+Player 51 has bought Property nr. 3
+1's turn: Rolled 6 and 2. Total: 8
+1 moved 8 steps. New position: 15
+2's turn: Rolled 5 and 3. Total: 8
+2 moved 8 steps. New position: 15
+4's turn: Rolled 1 and 3. Total: 4
+4 moved 4 steps. New position: 23
+4 paid rent of 0 to 1. Remaining gold: 118
+3's turn: Rolled 4 and 6. Total: 10
+3 moved 10 steps. New position: 13
+Player 51 has bought Property nr. 13
+1's turn: Rolled 5 and 5. Total: 10
+1 moved 10 steps. New position: 25
+Player 49 has bought Property nr. 25
+2's turn: Rolled 6 and 1. Total: 7
+2 moved 7 steps. New position: 22
+4's turn: Rolled 4 and 2. Total: 6
+4 moved 6 steps. New position: 1
+3's turn: Rolled 5 and 1. Total: 6
+3 moved 6 steps. New position: 19
+1's turn: Rolled 5 and 2. Total: 7
+1 moved 7 steps. New position: 4
+Player 49 has bought Property nr. 4
+2's turn: Rolled 4 and 4. Total: 8
+2 moved 8 steps. New position: 2
+2 paid rent of 0 to 1. Remaining gold: 160
+4's turn: Rolled 4 and 2. Total: 6
+4 moved 6 steps. New position: 7
+3's turn: Rolled 3 and 6. Total: 9
+3 moved 9 steps. New position: 28
+3 paid rent of 0 to 1. Remaining gold: 118
+1's turn: Rolled 2 and 6. Total: 8
+1 moved 8 steps. New position: 12
+Player 49 has built an house on Property nr. 12
+2's turn: Rolled 4 and 6. Total: 10
+2 moved 10 steps. New position: 12
+2 paid rent of 2 to 1. Remaining gold: 158
+4's turn: Rolled 4 and 1. Total: 5
+4 moved 5 steps. New position: 12
+4 paid rent of 2 to 1. Remaining gold: 136
+3's turn: Rolled 3 and 3. Total: 6
+3 moved 6 steps. New position: 6
+1's turn: Rolled 3 and 3. Total: 6
+1 moved 6 steps. New position: 18
+Player 49 has bought Property nr. 18
+2's turn: Rolled 4 and 4. Total: 8
+2 moved 8 steps. New position: 20
+2 paid rent of 0 to 4. Remaining gold: 158
+4's turn: Rolled 2 and 6. Total: 8
+4 moved 8 steps. New position: 20
+3's turn: Rolled 3 and 4. Total: 7
+3 moved 7 steps. New position: 13
+1's turn: Rolled 4 and 5. Total: 9
+1 moved 9 steps. New position: 27
+Player 49 has bought Property nr. 27
+2's turn: Rolled 1 and 6. Total: 7
+2 moved 7 steps. New position: 27
+2 paid rent of 0 to 1. Remaining gold: 158
+4's turn: Rolled 6 and 4. Total: 10
+4 moved 10 steps. New position: 2
+4 paid rent of 0 to 1. Remaining gold: 156
+3's turn: Rolled 4 and 5. Total: 9
+3 moved 9 steps. New position: 22
+1's turn: Rolled 5 and 5. Total: 10
+1 moved 10 steps. New position: 9
+Player 49 has bought Property nr. 9
+2's turn: Rolled 2 and 6. Total: 8
+2 moved 8 steps. New position: 7
+2 paid rent of 0 to 4. Remaining gold: 178
+4's turn: Rolled 2 and 5. Total: 7
+4 moved 7 steps. New position: 9
+4 paid rent of 0 to 1. Remaining gold: 156
+3's turn: Rolled 1 and 2. Total: 3
+3 moved 3 steps. New position: 25
+3 paid rent of 0 to 1. Remaining gold: 138
+1's turn: Rolled 5 and 3. Total: 8
+1 moved 8 steps. New position: 17
+Player 49 has bought Property nr. 17
+2's turn: Rolled 5 and 5. Total: 10
+2 moved 10 steps. New position: 17
+2 paid rent of 0 to 1. Remaining gold: 178
+4's turn: Rolled 3 and 3. Total: 6
+4 moved 6 steps. New position: 15
+3's turn: Rolled 2 and 4. Total: 6
+3 moved 6 steps. New position: 3
+1's turn: Rolled 5 and 4. Total: 9
+1 moved 9 steps. New position: 26
+1 paid rent of 0 to 4. Remaining gold: 53
+2's turn: Rolled 5 and 6. Total: 11
+2 moved 11 steps. New position: 28
+2 paid rent of 0 to 1. Remaining gold: 178
+4's turn: Rolled 2 and 1. Total: 3
+4 moved 3 steps. New position: 18
+4 paid rent of 0 to 1. Remaining gold: 156
+3's turn: Rolled 3 and 4. Total: 7
+3 moved 7 steps. New position: 10
+3 paid rent of 0 to 1. Remaining gold: 158
+1's turn: Rolled 6 and 6. Total: 12
+1 moved 12 steps. New position: 10
+Player 49 has built an house on Property nr. 10
+2's turn: Rolled 2 and 4. Total: 6
+2 moved 6 steps. New position: 6
+4's turn: Rolled 6 and 6. Total: 12
+4 moved 12 steps. New position: 2
+4 paid rent of 0 to 1. Remaining gold: 176
+3's turn: Rolled 1 and 3. Total: 4
+3 moved 4 steps. New position: 14
+Player 51 has bought Property nr. 14
+1's turn: Rolled 4 and 5. Total: 9
+1 moved 9 steps. New position: 19
+1 paid rent of 0 to 3. Remaining gold: 63
+2's turn: Rolled 1 and 2. Total: 3
+2 moved 3 steps. New position: 9
+2 paid rent of 0 to 1. Remaining gold: 198
+4's turn: Rolled 1 and 3. Total: 4
+4 moved 4 steps. New position: 6
+3's turn: Rolled 4 and 5. Total: 9
+3 moved 9 steps. New position: 23
+3 paid rent of 0 to 1. Remaining gold: 152
+1's turn: Rolled 5 and 3. Total: 8
+1 moved 8 steps. New position: 27
+Player 49 has built an house on Property nr. 27
+2's turn: Rolled 3 and 6. Total: 9
+2 moved 9 steps. New position: 18
+2 paid rent of 0 to 1. Remaining gold: 198
+4's turn: Rolled 4 and 2. Total: 6
+4 moved 6 steps. New position: 12
+4 paid rent of 2 to 1. Remaining gold: 174
+3's turn: Rolled 2 and 1. Total: 3
+3 moved 3 steps. New position: 26
+3 paid rent of 0 to 4. Remaining gold: 152
+1's turn: Rolled 3 and 2. Total: 5
+1 moved 5 steps. New position: 4
+Player 49 has built an house on Property nr. 4
+2's turn: Rolled 6 and 3. Total: 9
+2 moved 9 steps. New position: 27
+2 paid rent of 4 to 1. Remaining gold: 194
+4's turn: Rolled 1 and 2. Total: 3
+4 moved 3 steps. New position: 15
+3's turn: Rolled 4 and 6. Total: 10
+3 moved 10 steps. New position: 8
+1's turn: Rolled 6 and 1. Total: 7
+1 moved 7 steps. New position: 11
+Player 49 has bought Property nr. 11
+2's turn: Rolled 4 and 6. Total: 10
+2 moved 10 steps. New position: 9
+2 paid rent of 0 to 1. Remaining gold: 214
+4's turn: Rolled 4 and 3. Total: 7
+4 moved 7 steps. New position: 22
+3's turn: Rolled 5 and 5. Total: 10
+3 moved 10 steps. New position: 18
+3 paid rent of 0 to 1. Remaining gold: 172
+1's turn: Rolled 1 and 6. Total: 7
+1 moved 7 steps. New position: 18
+Player 49 has built an house on Property nr. 18
+2's turn: Rolled 3 and 5. Total: 8
+2 moved 8 steps. New position: 17
+2 paid rent of 0 to 1. Remaining gold: 214
+4's turn: Rolled 6 and 6. Total: 12
+4 moved 12 steps. New position: 6
+Player 52 has bought Property nr. 6
+3's turn: Rolled 1 and 4. Total: 5
+3 moved 5 steps. New position: 23
+3 paid rent of 0 to 1. Remaining gold: 172
+1's turn: Rolled 4 and 3. Total: 7
+1 moved 7 steps. New position: 25
+Player 49 has built an house on Property nr. 25
+2's turn: Rolled 6 and 2. Total: 8
+2 moved 8 steps. New position: 25
+2 paid rent of 7 to 1. Remaining gold: 207
+4's turn: Rolled 3 and 4. Total: 7
+4 moved 7 steps. New position: 13
+4 paid rent of 0 to 3. Remaining gold: 174
+3's turn: Rolled 4 and 6. Total: 10
+3 moved 10 steps. New position: 5
+1's turn: Rolled 4 and 5. Total: 9
+1 moved 9 steps. New position: 6
+1 paid rent of 0 to 4. Remaining gold: 66
+2's turn: Rolled 4 and 6. Total: 10
+2 moved 10 steps. New position: 7
+2 paid rent of 0 to 4. Remaining gold: 227
+4's turn: Rolled 6 and 3. Total: 9
+4 moved 9 steps. New position: 22
+3's turn: Rolled 5 and 6. Total: 11
+3 moved 11 steps. New position: 16
+1's turn: Rolled 1 and 2. Total: 3
+1 moved 3 steps. New position: 9
+Player 49 has built an house on Property nr. 9
+2's turn: Rolled 6 and 5. Total: 11
+2 moved 11 steps. New position: 18
+2 paid rent of 7 to 1. Remaining gold: 220
+4's turn: Rolled 6 and 3. Total: 9
+4 moved 9 steps. New position: 3
+4 paid rent of 0 to 3. Remaining gold: 194
+3's turn: Rolled 1 and 6. Total: 7
+3 moved 7 steps. New position: 23
+3 paid rent of 0 to 1. Remaining gold: 192
+1's turn: Rolled 6 and 6. Total: 12
+1 moved 12 steps. New position: 21
+Player 49 has bought Property nr. 21
+2's turn: Rolled 5 and 5. Total: 10
+2 moved 10 steps. New position: 28
+2 paid rent of 0 to 1. Remaining gold: 220
+4's turn: Rolled 5 and 6. Total: 11
+4 moved 11 steps. New position: 14
+4 paid rent of 0 to 3. Remaining gold: 194
+3's turn: Rolled 1 and 2. Total: 3
+3 moved 3 steps. New position: 26
+3 paid rent of 0 to 4. Remaining gold: 192
+1's turn: Rolled 6 and 2. Total: 8
+1 moved 8 steps. New position: 1
+2's turn: Rolled 1 and 1. Total: 2
+2 moved 2 steps. New position: 2
+2 paid rent of 0 to 1. Remaining gold: 240
+4's turn: Rolled 1 and 4. Total: 5
+4 moved 5 steps. New position: 19
+4 paid rent of 0 to 3. Remaining gold: 194
+3's turn: Rolled 3 and 6. Total: 9
+3 moved 9 steps. New position: 7
+3 paid rent of 0 to 4. Remaining gold: 212
+1's turn: Rolled 6 and 3. Total: 9
+1 moved 9 steps. New position: 10
+Player 49 has upgraded the Property nr. 10 into an hotel.
+2's turn: Rolled 5 and 6. Total: 11
+2 moved 11 steps. New position: 13
+2 paid rent of 0 to 3. Remaining gold: 240
+4's turn: Rolled 4 and 3. Total: 7
+4 moved 7 steps. New position: 26
+3's turn: Rolled 6 and 1. Total: 7
+3 moved 7 steps. New position: 14
+1's turn: Rolled 1 and 1. Total: 2
+1 moved 2 steps. New position: 12
+Player 49 has upgraded the Property nr. 12 into an hotel.
+2's turn: Rolled 2 and 2. Total: 4
+2 moved 4 steps. New position: 17
+2 paid rent of 0 to 1. Remaining gold: 240
+4's turn: Rolled 4 and 4. Total: 8
+4 moved 8 steps. New position: 6
+3's turn: Rolled 6 and 5. Total: 11
+3 moved 11 steps. New position: 25
+3 paid rent of 7 to 1. Remaining gold: 205
+1's turn: Rolled 1 and 6. Total: 7
+1 moved 7 steps. New position: 19
+1 paid rent of 0 to 3. Remaining gold: 72
+2's turn: Rolled 4 and 4. Total: 8
+2 moved 8 steps. New position: 25
+2 paid rent of 7 to 1. Remaining gold: 233
+4's turn: Rolled 5 and 6. Total: 11
+4 moved 11 steps. New position: 17
+4 paid rent of 0 to 1. Remaining gold: 214
+3's turn: Rolled 3 and 1. Total: 4
+3 moved 4 steps. New position: 1
+1's turn: Rolled 2 and 3. Total: 5
+1 moved 5 steps. New position: 24
+Player 49 has bought Property nr. 24
+2's turn: Rolled 5 and 2. Total: 7
+2 moved 7 steps. New position: 4
+2 paid rent of 4 to 1. Remaining gold: 249
+4's turn: Rolled 5 and 5. Total: 10
+4 moved 10 steps. New position: 27
+4 paid rent of 4 to 1. Remaining gold: 210
+3's turn: Rolled 1 and 5. Total: 6
+3 moved 6 steps. New position: 7
+3 paid rent of 0 to 4. Remaining gold: 225
+1's turn: Rolled 5 and 4. Total: 9
+1 moved 9 steps. New position: 5
+Player 49 has bought Property nr. 5
+2's turn: Rolled 2 and 2. Total: 4
+2 moved 4 steps. New position: 8
+4's turn: Rolled 3 and 5. Total: 8
+4 moved 8 steps. New position: 7
+3's turn: Rolled 2 and 1. Total: 3
+3 moved 3 steps. New position: 10
+3 paid rent of 14 to 1. Remaining gold: 211
+1's turn: Rolled 6 and 2. Total: 8
+1 moved 8 steps. New position: 13
+1 paid rent of 0 to 3. Remaining gold: 101
+2's turn: Rolled 4 and 3. Total: 7
+2 moved 7 steps. New position: 15
+4's turn: Rolled 6 and 1. Total: 7
+4 moved 7 steps. New position: 14
+4 paid rent of 0 to 3. Remaining gold: 230
+3's turn: Rolled 3 and 5. Total: 8
+3 moved 8 steps. New position: 18
+3 paid rent of 7 to 1. Remaining gold: 204
+1's turn: Rolled 4 and 1. Total: 5
+1 moved 5 steps. New position: 18
+Player 49 has upgraded the Property nr. 18 into an hotel.
+2's turn: Rolled 3 and 5. Total: 8
+2 moved 8 steps. New position: 23
+2 paid rent of 0 to 1. Remaining gold: 249
+4's turn: Rolled 6 and 4. Total: 10
+4 moved 10 steps. New position: 24
+4 paid rent of 0 to 1. Remaining gold: 230
+3's turn: Rolled 6 and 6. Total: 12
+3 moved 12 steps. New position: 2
+3 paid rent of 0 to 1. Remaining gold: 224
+1's turn: Rolled 6 and 4. Total: 10
+1 moved 10 steps. New position: 28
+Player 49 has built an house on Property nr. 28
+2's turn: Rolled 2 and 2. Total: 4
+2 moved 4 steps. New position: 27
+2 paid rent of 4 to 1. Remaining gold: 245
+4's turn: Rolled 6 and 6. Total: 12
+4 moved 12 steps. New position: 8
+3's turn: Rolled 6 and 2. Total: 8
+3 moved 8 steps. New position: 10
+3 paid rent of 14 to 1. Remaining gold: 210
+1's turn: Rolled 5 and 6. Total: 11
+1 moved 11 steps. New position: 11
+Player 49 has built an house on Property nr. 11
+2's turn: Rolled 4 and 3. Total: 7
+2 moved 7 steps. New position: 6
+2 paid rent of 0 to 4. Remaining gold: 265
+4's turn: Rolled 1 and 2. Total: 3
+4 moved 3 steps. New position: 11
+4 paid rent of 7 to 1. Remaining gold: 243
+3's turn: Rolled 2 and 3. Total: 5
+3 moved 5 steps. New position: 15
+1's turn: Rolled 3 and 4. Total: 7
+1 moved 7 steps. New position: 18
+2's turn: Rolled 1 and 4. Total: 5
+2 moved 5 steps. New position: 11
+2 paid rent of 7 to 1. Remaining gold: 258
+4's turn: Rolled 3 and 1. Total: 4
+4 moved 4 steps. New position: 15
+3's turn: Rolled 4 and 6. Total: 10
+3 moved 10 steps. New position: 25
+3 paid rent of 7 to 1. Remaining gold: 203
+1's turn: Rolled 5 and 5. Total: 10
+1 moved 10 steps. New position: 28
+Player 49 has upgraded the Property nr. 28 into an hotel.
+2's turn: Rolled 3 and 3. Total: 6
+2 moved 6 steps. New position: 17
+2 paid rent of 0 to 1. Remaining gold: 258
+4's turn: Rolled 3 and 6. Total: 9
+4 moved 9 steps. New position: 24
+4 paid rent of 0 to 1. Remaining gold: 243
+3's turn: Rolled 5 and 4. Total: 9
+3 moved 9 steps. New position: 6
+3 paid rent of 0 to 4. Remaining gold: 223
+1's turn: Rolled 3 and 4. Total: 7
+1 moved 7 steps. New position: 7
+1 paid rent of 0 to 4. Remaining gold: 161
+2's turn: Rolled 1 and 5. Total: 6
+2 moved 6 steps. New position: 23
+2 paid rent of 0 to 1. Remaining gold: 258
+4's turn: Rolled 5 and 5. Total: 10
+4 moved 10 steps. New position: 6
+3's turn: Rolled 1 and 6. Total: 7
+3 moved 7 steps. New position: 13
+1's turn: Rolled 5 and 6. Total: 11
+1 moved 11 steps. New position: 18
+2's turn: Rolled 5 and 3. Total: 8
+2 moved 8 steps. New position: 3
+2 paid rent of 0 to 3. Remaining gold: 278
+4's turn: Rolled 3 and 6. Total: 9
+4 moved 9 steps. New position: 15
+3's turn: Rolled 5 and 4. Total: 9
+3 moved 9 steps. New position: 22
+1's turn: Rolled 3 and 3. Total: 6
+1 moved 6 steps. New position: 24
+Player 49 has built an house on Property nr. 24
+2's turn: Rolled 3 and 3. Total: 6
+2 moved 6 steps. New position: 9
+2 paid rent of 4 to 1. Remaining gold: 274
+4's turn: Rolled 1 and 5. Total: 6
+4 moved 6 steps. New position: 21
+4 paid rent of 0 to 1. Remaining gold: 263
+3's turn: Rolled 4 and 4. Total: 8
+3 moved 8 steps. New position: 2
+3 paid rent of 0 to 1. Remaining gold: 243
+1's turn: Rolled 5 and 3. Total: 8
+1 moved 8 steps. New position: 4
+Player 49 has upgraded the Property nr. 4 into an hotel.
+2's turn: Rolled 1 and 4. Total: 5
+2 moved 5 steps. New position: 14
+2 paid rent of 0 to 3. Remaining gold: 274
+4's turn: Rolled 3 and 2. Total: 5
+4 moved 5 steps. New position: 26
+3's turn: Rolled 3 and 4. Total: 7
+3 moved 7 steps. New position: 9
+3 paid rent of 4 to 1. Remaining gold: 239
+1's turn: Rolled 2 and 4. Total: 6
+1 moved 6 steps. New position: 10
+2's turn: Rolled 6 and 5. Total: 11
+2 moved 11 steps. New position: 25
+2 paid rent of 7 to 1. Remaining gold: 267
+4's turn: Rolled 5 and 2. Total: 7
+4 moved 7 steps. New position: 5
+4 paid rent of 0 to 1. Remaining gold: 283
+3's turn: Rolled 1 and 2. Total: 3
+3 moved 3 steps. New position: 12
+3 paid rent of 4 to 1. Remaining gold: 235
+1's turn: Rolled 4 and 2. Total: 6
+1 moved 6 steps. New position: 16
+Player 49 has bought Property nr. 16
+2's turn: Rolled 5 and 4. Total: 9
+2 moved 9 steps. New position: 6
+2 paid rent of 0 to 4. Remaining gold: 287
+4's turn: Rolled 1 and 6. Total: 7
+4 moved 7 steps. New position: 12
+4 paid rent of 4 to 1. Remaining gold: 279
+3's turn: Rolled 3 and 5. Total: 8
+3 moved 8 steps. New position: 20
+3 paid rent of 0 to 4. Remaining gold: 235
+1's turn: Rolled 3 and 3. Total: 6
+1 moved 6 steps. New position: 22
+2's turn: Rolled 5 and 4. Total: 9
+2 moved 9 steps. New position: 15
+4's turn: Rolled 2 and 4. Total: 6
+4 moved 6 steps. New position: 18
+4 paid rent of 14 to 1. Remaining gold: 265
+3's turn: Rolled 6 and 3. Total: 9
+3 moved 9 steps. New position: 1
+1's turn: Rolled 1 and 2. Total: 3
+1 moved 3 steps. New position: 25
+Player 49 has upgraded the Property nr. 25 into an hotel.
+2's turn: Rolled 1 and 4. Total: 5
+2 moved 5 steps. New position: 20
+2 paid rent of 0 to 4. Remaining gold: 287
+4's turn: Rolled 3 and 6. Total: 9
+4 moved 9 steps. New position: 27
+4 paid rent of 4 to 1. Remaining gold: 261
+3's turn: Rolled 4 and 1. Total: 5
+3 moved 5 steps. New position: 6
+3 paid rent of 0 to 4. Remaining gold: 255
+1's turn: Rolled 1 and 5. Total: 6
+1 moved 6 steps. New position: 3
+1 paid rent of 0 to 3. Remaining gold: 202
+2's turn: Rolled 6 and 2. Total: 8
+2 moved 8 steps. New position: 28
+2 paid rent of 4 to 1. Remaining gold: 283
+4's turn: Rolled 4 and 5. Total: 9
+4 moved 9 steps. New position: 8
+3's turn: Rolled 2 and 2. Total: 4
+3 moved 4 steps. New position: 10
+3 paid rent of 14 to 1. Remaining gold: 241
+1's turn: Rolled 5 and 4. Total: 9
+1 moved 9 steps. New position: 12
+2's turn: Rolled 1 and 6. Total: 7
+2 moved 7 steps. New position: 7
+2 paid rent of 0 to 4. Remaining gold: 303
+4's turn: Rolled 3 and 1. Total: 4
+4 moved 4 steps. New position: 12
+4 paid rent of 4 to 1. Remaining gold: 277
+3's turn: Rolled 4 and 4. Total: 8
+3 moved 8 steps. New position: 18
+3 paid rent of 14 to 1. Remaining gold: 227
+1's turn: Rolled 2 and 2. Total: 4
+1 moved 4 steps. New position: 16
+Player 49 has built an house on Property nr. 16
+2's turn: Rolled 6 and 1. Total: 7
+2 moved 7 steps. New position: 14
+2 paid rent of 0 to 3. Remaining gold: 303
+4's turn: Rolled 5 and 1. Total: 6
+4 moved 6 steps. New position: 18
+4 paid rent of 14 to 1. Remaining gold: 263
+3's turn: Rolled 2 and 2. Total: 4
+3 moved 4 steps. New position: 22
+1's turn: Rolled 4 and 6. Total: 10
+1 moved 10 steps. New position: 26
+1 paid rent of 0 to 4. Remaining gold: 242
+2's turn: Rolled 6 and 2. Total: 8
+2 moved 8 steps. New position: 22
+4's turn: Rolled 3 and 5. Total: 8
+4 moved 8 steps. New position: 26
+3's turn: Rolled 2 and 3. Total: 5
+3 moved 5 steps. New position: 27
+3 paid rent of 4 to 1. Remaining gold: 223
+1's turn: Rolled 4 and 5. Total: 9
+1 moved 9 steps. New position: 7
+1 paid rent of 0 to 4. Remaining gold: 266
+2's turn: Rolled 5 and 6. Total: 11
+2 moved 11 steps. New position: 5
+2 paid rent of 0 to 1. Remaining gold: 323
+4's turn: Rolled 4 and 3. Total: 7
+4 moved 7 steps. New position: 5
+4 paid rent of 0 to 1. Remaining gold: 283
+3's turn: Rolled 1 and 3. Total: 4
+3 moved 4 steps. New position: 3
+1's turn: Rolled 2 and 1. Total: 3
+1 moved 3 steps. New position: 10
+2's turn: Rolled 3 and 2. Total: 5
+2 moved 5 steps. New position: 10
+2 paid rent of 14 to 1. Remaining gold: 309
+4's turn: Rolled 6 and 3. Total: 9
+4 moved 9 steps. New position: 14
+4 paid rent of 0 to 3. Remaining gold: 283
+3's turn: Rolled 1 and 6. Total: 7
+3 moved 7 steps. New position: 10
+3 paid rent of 14 to 1. Remaining gold: 229
+1's turn: Rolled 6 and 2. Total: 8
+1 moved 8 steps. New position: 18
+2's turn: Rolled 1 and 5. Total: 6
+2 moved 6 steps. New position: 16
+2 paid rent of 7 to 1. Remaining gold: 302
+4's turn: Rolled 4 and 3. Total: 7
+4 moved 7 steps. New position: 21
+4 paid rent of 0 to 1. Remaining gold: 283
+3's turn: Rolled 3 and 1. Total: 4
+3 moved 4 steps. New position: 14
+1's turn: Rolled 4 and 5. Total: 9
+1 moved 9 steps. New position: 27
+Player 49 has upgraded the Property nr. 27 into an hotel.
+2's turn: Rolled 3 and 2. Total: 5
+2 moved 5 steps. New position: 21
+2 paid rent of 0 to 1. Remaining gold: 302
+4's turn: Rolled 5 and 3. Total: 8
+4 moved 8 steps. New position: 1
+3's turn: Rolled 2 and 3. Total: 5
+3 moved 5 steps. New position: 19
+1's turn: Rolled 2 and 5. Total: 7
+1 moved 7 steps. New position: 6
+1 paid rent of 0 to 4. Remaining gold: 316
+2's turn: Rolled 5 and 1. Total: 6
+2 moved 6 steps. New position: 27
+2 paid rent of 8 to 1. Remaining gold: 294
+4's turn: Rolled 4 and 1. Total: 5
+4 moved 5 steps. New position: 6
+3's turn: Rolled 5 and 1. Total: 6
+3 moved 6 steps. New position: 25
+3 paid rent of 14 to 1. Remaining gold: 215
+1's turn: Rolled 2 and 1. Total: 3
+1 moved 3 steps. New position: 9
+Player 49 has upgraded the Property nr. 9 into an hotel.
+2's turn: Rolled 1 and 4. Total: 5
+2 moved 5 steps. New position: 4
+2 paid rent of 8 to 1. Remaining gold: 306
+4's turn: Rolled 5 and 3. Total: 8
+4 moved 8 steps. New position: 14
+4 paid rent of 0 to 3. Remaining gold: 303
+3's turn: Rolled 4 and 4. Total: 8
+3 moved 8 steps. New position: 5
+3 paid rent of 0 to 1. Remaining gold: 235
+1's turn: Rolled 5 and 1. Total: 6
+1 moved 6 steps. New position: 15
+2's turn: Rolled 4 and 3. Total: 7
+2 moved 7 steps. New position: 11
+2 paid rent of 7 to 1. Remaining gold: 299
+4's turn: Rolled 3 and 6. Total: 9
+4 moved 9 steps. New position: 23
+4 paid rent of 0 to 1. Remaining gold: 303
+3's turn: Rolled 3 and 5. Total: 8
+3 moved 8 steps. New position: 13
+1's turn: Rolled 5 and 5. Total: 10
+1 moved 10 steps. New position: 25
+2's turn: Rolled 5 and 1. Total: 6
+2 moved 6 steps. New position: 17
+2 paid rent of 0 to 1. Remaining gold: 299
+4's turn: Rolled 2 and 1. Total: 3
+4 moved 3 steps. New position: 26
+3's turn: Rolled 6 and 6. Total: 12
+3 moved 12 steps. New position: 25
+3 paid rent of 14 to 1. Remaining gold: 221
+1's turn: Rolled 5 and 6. Total: 11
+1 moved 11 steps. New position: 8
+2's turn: Rolled 3 and 2. Total: 5
+2 moved 5 steps. New position: 22
+4's turn: Rolled 1 and 3. Total: 4
+4 moved 4 steps. New position: 2
+4 paid rent of 0 to 1. Remaining gold: 323
+3's turn: Rolled 6 and 5. Total: 11
+3 moved 11 steps. New position: 8
+1's turn: Rolled 4 and 1. Total: 5
+1 moved 5 steps. New position: 13
+1 paid rent of 0 to 3. Remaining gold: 382
+2's turn: Rolled 1 and 4. Total: 5
+2 moved 5 steps. New position: 27
+2 paid rent of 8 to 1. Remaining gold: 291
+4's turn: Rolled 4 and 6. Total: 10
+4 moved 10 steps. New position: 12
+4 paid rent of 4 to 1. Remaining gold: 319
+3's turn: Rolled 1 and 2. Total: 3
+3 moved 3 steps. New position: 11
+3 paid rent of 7 to 1. Remaining gold: 234
+1's turn: Rolled 5 and 3. Total: 8
+1 moved 8 steps. New position: 21
+Player 49 has built an house on Property nr. 21
+2's turn: Rolled 1 and 1. Total: 2
+2 moved 2 steps. New position: 1
+4's turn: Rolled 2 and 2. Total: 4
+4 moved 4 steps. New position: 16
+4 paid rent of 7 to 1. Remaining gold: 312
+3's turn: Rolled 6 and 4. Total: 10
+3 moved 10 steps. New position: 21
+3 paid rent of 4 to 1. Remaining gold: 230
+1's turn: Rolled 6 and 2. Total: 8
+1 moved 8 steps. New position: 1
+2's turn: Rolled 2 and 2. Total: 4
+2 moved 4 steps. New position: 5
+2 paid rent of 0 to 1. Remaining gold: 311
+4's turn: Rolled 2 and 2. Total: 4
+4 moved 4 steps. New position: 20
+3's turn: Rolled 3 and 3. Total: 6
+3 moved 6 steps. New position: 27
+3 paid rent of 8 to 1. Remaining gold: 222
+1's turn: Rolled 2 and 2. Total: 4
+1 moved 4 steps. New position: 5
+Player 49 has built an house on Property nr. 5
+2's turn: Rolled 3 and 4. Total: 7
+2 moved 7 steps. New position: 12
+2 paid rent of 4 to 1. Remaining gold: 307
+4's turn: Rolled 5 and 5. Total: 10
+4 moved 10 steps. New position: 2
+4 paid rent of 0 to 1. Remaining gold: 332
+3's turn: Rolled 6 and 1. Total: 7
+3 moved 7 steps. New position: 6
+3 paid rent of 0 to 4. Remaining gold: 242
+1's turn: Rolled 5 and 1. Total: 6
+1 moved 6 steps. New position: 11
+Player 49 has upgraded the Property nr. 11 into an hotel.
+2's turn: Rolled 5 and 2. Total: 7
+2 moved 7 steps. New position: 19
+2 paid rent of 0 to 3. Remaining gold: 307
+4's turn: Rolled 5 and 6. Total: 11
+4 moved 11 steps. New position: 13
+4 paid rent of 0 to 3. Remaining gold: 332
+3's turn: Rolled 4 and 1. Total: 5
+3 moved 5 steps. New position: 11
+3 paid rent of 14 to 1. Remaining gold: 228
+1's turn: Rolled 3 and 5. Total: 8
+1 moved 8 steps. New position: 19
+1 paid rent of 0 to 3. Remaining gold: 438
+2's turn: Rolled 4 and 4. Total: 8
+2 moved 8 steps. New position: 27
+2 paid rent of 8 to 1. Remaining gold: 299
+4's turn: Rolled 2 and 4. Total: 6
+4 moved 6 steps. New position: 19
+4 paid rent of 0 to 3. Remaining gold: 332
+3's turn: Rolled 3 and 6. Total: 9
+3 moved 9 steps. New position: 20
+3 paid rent of 0 to 4. Remaining gold: 228
+1's turn: Rolled 1 and 2. Total: 3
+1 moved 3 steps. New position: 22
+2's turn: Rolled 3 and 2. Total: 5
+2 moved 5 steps. New position: 4
+2 paid rent of 8 to 1. Remaining gold: 311
+4's turn: Rolled 6 and 1. Total: 7
+4 moved 7 steps. New position: 26
+3's turn: Rolled 2 and 4. Total: 6
+3 moved 6 steps. New position: 26
+3 paid rent of 0 to 4. Remaining gold: 228
+1's turn: Rolled 4 and 6. Total: 10
+1 moved 10 steps. New position: 4
+2's turn: Rolled 1 and 4. Total: 5
+2 moved 5 steps. New position: 9
+2 paid rent of 8 to 1. Remaining gold: 303
+4's turn: Rolled 3 and 6. Total: 9
+4 moved 9 steps. New position: 7
+3's turn: Rolled 2 and 1. Total: 3
+3 moved 3 steps. New position: 1
+1's turn: Rolled 2 and 5. Total: 7
+1 moved 7 steps. New position: 11
+2's turn: Rolled 2 and 1. Total: 3
+2 moved 3 steps. New position: 12
+2 paid rent of 4 to 1. Remaining gold: 299
+4's turn: Rolled 4 and 5. Total: 9
+4 moved 9 steps. New position: 16
+4 paid rent of 7 to 1. Remaining gold: 345
+3's turn: Rolled 3 and 2. Total: 5
+3 moved 5 steps. New position: 6
+3 paid rent of 0 to 4. Remaining gold: 248
+1's turn: Rolled 6 and 5. Total: 11
+1 moved 11 steps. New position: 22
+2's turn: Rolled 4 and 6. Total: 10
+2 moved 10 steps. New position: 22
+4's turn: Rolled 4 and 1. Total: 5
+4 moved 5 steps. New position: 21
+4 paid rent of 4 to 1. Remaining gold: 341
+3's turn: Rolled 3 and 2. Total: 5
+3 moved 5 steps. New position: 11
+3 paid rent of 14 to 1. Remaining gold: 234
+1's turn: Rolled 5 and 2. Total: 7
+1 moved 7 steps. New position: 1
+2's turn: Rolled 2 and 3. Total: 5
+2 moved 5 steps. New position: 27
+2 paid rent of 8 to 1. Remaining gold: 291
+4's turn: Rolled 4 and 5. Total: 9
+4 moved 9 steps. New position: 2
+4 paid rent of 0 to 1. Remaining gold: 361
+3's turn: Rolled 5 and 3. Total: 8
+3 moved 8 steps. New position: 19
+1's turn: Rolled 5 and 3. Total: 8
+1 moved 8 steps. New position: 9
+2's turn: Rolled 2 and 5. Total: 7
+2 moved 7 steps. New position: 6
+2 paid rent of 0 to 4. Remaining gold: 311
+4's turn: Rolled 6 and 5. Total: 11
+4 moved 11 steps. New position: 13
+4 paid rent of 0 to 3. Remaining gold: 361
+3's turn: Rolled 2 and 6. Total: 8
+3 moved 8 steps. New position: 27
+3 paid rent of 8 to 1. Remaining gold: 226
+1's turn: Rolled 6 and 3. Total: 9
+1 moved 9 steps. New position: 18
+2's turn: Rolled 2 and 6. Total: 8
+2 moved 8 steps. New position: 14
+2 paid rent of 0 to 3. Remaining gold: 311
+4's turn: Rolled 4 and 4. Total: 8
+4 moved 8 steps. New position: 21
+4 paid rent of 4 to 1. Remaining gold: 357
+3's turn: Rolled 3 and 2. Total: 5
+3 moved 5 steps. New position: 4
+3 paid rent of 8 to 1. Remaining gold: 238
+1's turn: Rolled 5 and 4. Total: 9
+1 moved 9 steps. New position: 27
+2's turn: Rolled 5 and 4. Total: 9
+2 moved 9 steps. New position: 23
+2 paid rent of 0 to 1. Remaining gold: 311
+4's turn: Rolled 5 and 5. Total: 10
+4 moved 10 steps. New position: 3
+4 paid rent of 0 to 3. Remaining gold: 377
+3's turn: Rolled 3 and 6. Total: 9
+3 moved 9 steps. New position: 13
+1's turn: Rolled 4 and 1. Total: 5
+1 moved 5 steps. New position: 4
+2's turn: Rolled 6 and 1. Total: 7
+2 moved 7 steps. New position: 2
+2 paid rent of 0 to 1. Remaining gold: 331
+4's turn: Rolled 6 and 4. Total: 10
+4 moved 10 steps. New position: 13
+4 paid rent of 0 to 3. Remaining gold: 377
+3's turn: Rolled 5 and 2. Total: 7
+3 moved 7 steps. New position: 20
+3 paid rent of 0 to 4. Remaining gold: 238
+1's turn: Rolled 4 and 5. Total: 9
+1 moved 9 steps. New position: 13
+1 paid rent of 0 to 3. Remaining gold: 579
+2's turn: Rolled 1 and 5. Total: 6
+2 moved 6 steps. New position: 8
+4's turn: Rolled 1 and 6. Total: 7
+4 moved 7 steps. New position: 20
+3's turn: Rolled 6 and 3. Total: 9
+3 moved 9 steps. New position: 1
+1's turn: Rolled 6 and 2. Total: 8
+1 moved 8 steps. New position: 21
+Player 49 has upgraded the Property nr. 21 into an hotel.
+2's turn: Rolled 1 and 5. Total: 6
+2 moved 6 steps. New position: 14
+2 paid rent of 0 to 3. Remaining gold: 331
+4's turn: Rolled 5 and 2. Total: 7
+4 moved 7 steps. New position: 27
+4 paid rent of 8 to 1. Remaining gold: 369
+3's turn: Rolled 4 and 3. Total: 7
+3 moved 7 steps. New position: 8
+1's turn: Rolled 2 and 4. Total: 6
+1 moved 6 steps. New position: 27
+2's turn: Rolled 4 and 5. Total: 9
+2 moved 9 steps. New position: 23
+2 paid rent of 0 to 1. Remaining gold: 331
+4's turn: Rolled 5 and 6. Total: 11
+4 moved 11 steps. New position: 10
+4 paid rent of 14 to 1. Remaining gold: 375
+3's turn: Rolled 2 and 2. Total: 4
+3 moved 4 steps. New position: 12
+3 paid rent of 4 to 1. Remaining gold: 254
+1's turn: Rolled 1 and 1. Total: 2
+1 moved 2 steps. New position: 1
+2's turn: Rolled 3 and 1. Total: 4
+2 moved 4 steps. New position: 27
+2 paid rent of 8 to 1. Remaining gold: 323
+4's turn: Rolled 1 and 3. Total: 4
+4 moved 4 steps. New position: 14
+4 paid rent of 0 to 3. Remaining gold: 375
+3's turn: Rolled 4 and 1. Total: 5
+3 moved 5 steps. New position: 17
+3 paid rent of 0 to 1. Remaining gold: 254
+1's turn: Rolled 4 and 5. Total: 9
+1 moved 9 steps. New position: 10
+2's turn: Rolled 5 and 1. Total: 6
+2 moved 6 steps. New position: 5
+2 paid rent of 4 to 1. Remaining gold: 339
+4's turn: Rolled 2 and 2. Total: 4
+4 moved 4 steps. New position: 18
+4 paid rent of 14 to 1. Remaining gold: 361
+3's turn: Rolled 4 and 3. Total: 7
+3 moved 7 steps. New position: 24
+3 paid rent of 4 to 1. Remaining gold: 250
+1's turn: Rolled 5 and 1. Total: 6
+1 moved 6 steps. New position: 16
+Player 49 has upgraded the Property nr. 16 into an hotel.
+2's turn: Rolled 6 and 1. Total: 7
+2 moved 7 steps. New position: 12
+2 paid rent of 4 to 1. Remaining gold: 335
+4's turn: Rolled 3 and 4. Total: 7
+4 moved 7 steps. New position: 25
+4 paid rent of 14 to 1. Remaining gold: 347
+3's turn: Rolled 1 and 2. Total: 3
+3 moved 3 steps. New position: 27
+3 paid rent of 8 to 1. Remaining gold: 242
+1's turn: Rolled 1 and 6. Total: 7
+1 moved 7 steps. New position: 23
+Player 49 has built an house on Property nr. 23
+2's turn: Rolled 4 and 6. Total: 10
+2 moved 10 steps. New position: 22
+4's turn: Rolled 2 and 5. Total: 7
+4 moved 7 steps. New position: 4
+4 paid rent of 8 to 1. Remaining gold: 359
+3's turn: Rolled 2 and 4. Total: 6
+3 moved 6 steps. New position: 5
+3 paid rent of 4 to 1. Remaining gold: 258
+1's turn: Rolled 5 and 2. Total: 7
+1 moved 7 steps. New position: 2
+Player 49 has built an house on Property nr. 2
+2's turn: Rolled 1 and 4. Total: 5
+2 moved 5 steps. New position: 27
+2 paid rent of 8 to 1. Remaining gold: 327
+4's turn: Rolled 1 and 2. Total: 3
+4 moved 3 steps. New position: 7
+3's turn: Rolled 5 and 5. Total: 10
+3 moved 10 steps. New position: 15
+1's turn: Rolled 2 and 3. Total: 5
+1 moved 5 steps. New position: 7
+1 paid rent of 0 to 4. Remaining gold: 696
+2's turn: Rolled 1 and 6. Total: 7
+2 moved 7 steps. New position: 6
+2 paid rent of 0 to 4. Remaining gold: 347
+4's turn: Rolled 5 and 1. Total: 6
+4 moved 6 steps. New position: 13
+4 paid rent of 0 to 3. Remaining gold: 359
+3's turn: Rolled 4 and 5. Total: 9
+3 moved 9 steps. New position: 24
+3 paid rent of 4 to 1. Remaining gold: 254
+1's turn: Rolled 2 and 2. Total: 4
+1 moved 4 steps. New position: 11
+2's turn: Rolled 6 and 3. Total: 9
+2 moved 9 steps. New position: 15
+4's turn: Rolled 6 and 1. Total: 7
+4 moved 7 steps. New position: 20
+3's turn: Rolled 2 and 1. Total: 3
+3 moved 3 steps. New position: 27
+3 paid rent of 8 to 1. Remaining gold: 246
+1's turn: Rolled 4 and 3. Total: 7
+1 moved 7 steps. New position: 18
+2's turn: Rolled 4 and 2. Total: 6
+2 moved 6 steps. New position: 21
+2 paid rent of 8 to 1. Remaining gold: 339
+4's turn: Rolled 5 and 1. Total: 6
+4 moved 6 steps. New position: 26
+3's turn: Rolled 6 and 6. Total: 12
+3 moved 12 steps. New position: 11
+3 paid rent of 14 to 1. Remaining gold: 252
+1's turn: Rolled 1 and 5. Total: 6
+1 moved 6 steps. New position: 24
+Player 49 has upgraded the Property nr. 24 into an hotel.
+2's turn: Rolled 1 and 5. Total: 6
+2 moved 6 steps. New position: 27
+2 paid rent of 8 to 1. Remaining gold: 331
+4's turn: Rolled 3 and 4. Total: 7
+4 moved 7 steps. New position: 5
+4 paid rent of 4 to 1. Remaining gold: 375
+3's turn: Rolled 3 and 3. Total: 6
+3 moved 6 steps. New position: 17
+3 paid rent of 0 to 1. Remaining gold: 252
+1's turn: Rolled 3 and 3. Total: 6
+1 moved 6 steps. New position: 2
