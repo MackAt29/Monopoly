@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
             }
             else {
                 //GENERA INIZIALMENTE la scelta della CPU al 25%. Se l'utente di turno è umano, choice cambia a seconda della scelta dell'utente.
-                bool choice = (std::rand() % 100) <= 25;
+                bool choice = (std::rand() % 100) < 25;
                 
                 //Se la casella è libera, puoi comprarla
                 if(casella.getOwner() == nullptr){
