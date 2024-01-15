@@ -111,10 +111,14 @@ int main(int argc, char** argv) {
                 else if(casella.getOwner() == &rounds[i]){
                     if(rounds[i].isHumanPlayer()){
                         while(humanTurn){
-                            std::cout<<"E' il tuo turno e sei arrivato su una tua casella. \nVuoi comprare il terreno per "<<casella.getBuyPrice()<<" fiorini? [Y/N]"<<std::endl;
-                            std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
+                            std::cout<<"E' il tuo turno e sei arrivato su una tua casella."<<std::endl;
+                            // \nVuoi comprare il terreno per "<<casella.getBuyPrice()<<" fiorini? [Y/N]"<<std::endl;
                             std::string input;
+                            if(casella.getStatus()==1){
+                                std::cout<<"\nVuoi comprare una casa per "<<casella.getHousePrice()<<" fiorini? [Y/N]"<<std::endl;
+                            std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
                             std::cin >> input;
+                            }
 
                             if (input == "Y" || input == "y") {
                                 bool choice = true;
