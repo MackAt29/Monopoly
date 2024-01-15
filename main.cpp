@@ -115,8 +115,8 @@ int main(int argc, char** argv) {
                                 rounds[i].payProperty(casella.getBuyPrice());
                                 rounds[i].acquireProperty(casella);
                                 casella.buyLand(&rounds[i]);
-                                std::cout << "Giocatore " << rounds[i].getName() << " ha comprato la Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
-                                rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha comprato la Casella nr. " + std::to_string(rounds[i].getPosition()+1));
+                                std::cout << "Giocatore " << rounds[i].getName() << " ha comprato la casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha comprato la casella nr. " + std::to_string(rounds[i].getPosition()+1));
                             }
                         }
                     }
@@ -124,7 +124,6 @@ int main(int argc, char** argv) {
                         if(rounds[i].isHumanPlayer()){
                             while(humanTurn){
                                 std::cout<<"E' il tuo turno e sei arrivato su una tua casella."<<std::endl;
-                                // \nVuoi comprare il terreno per "<<casella.getBuyPrice()<<" fiorini? [Y/N]"<<std::endl;
                                 std::string input;
                                 if(casella.getCategory()==1){
                                     std::cout<<"\nVuoi comprare una casa per "<<casella.getHousePrice()<<" fiorini? [Y/N]"<<std::endl;
@@ -157,13 +156,13 @@ int main(int argc, char** argv) {
                                 if(casella.getStatus()==1){
                                     rounds[i].payProperty(casella.getHousePrice());
                                     casella.buyHouse();
-                                    std::cout << "Giocatore " << rounds[i].getName() << " ha costruito una casa nella Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
-                                    rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha costruito una casa nella Casella nr. " + std::to_string(rounds[i].getPosition()+1));
+                                    std::cout << "Giocatore " << rounds[i].getName() << " ha costruito una casa nella casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                    rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha costruito una casa nella casella nr. " + std::to_string(rounds[i].getPosition()+1));
                                 } else if(casella.getStatus()==2){
                                     rounds[i].payProperty(casella.getHotelPrice());
                                     casella.buyHotel();
-                                    std::cout << "Giocatore " << rounds[i].getName() << " ha potenziato la Casella nr. "<< rounds[i].getPosition()+1<< " in un albero." << std::endl;
-                                    rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha potenziato la Casella nr. " + std::to_string(rounds[i].getPosition()+1) + " in un albergo");
+                                    std::cout << "Giocatore " << rounds[i].getName() << " ha potenziato la casella nr. "<< rounds[i].getPosition()+1<< " in un albero." << std::endl;
+                                    rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha potenziato la casella nr. " + std::to_string(rounds[i].getPosition()+1) + " in un albergo");
                                 } 
                             }
                             humanTurn=true;

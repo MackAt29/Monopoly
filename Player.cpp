@@ -1,6 +1,7 @@
 //Margherita Cattapan 2008798
 #include "player.h"
 #include <iostream>
+#include <string>
 #include <fstream>
 #include <cstdlib>
 
@@ -11,7 +12,7 @@ Player::Player(const char& playerName, bool human)
 Player::Player(const Player& other) : name(other.name), isHuman(other.isHuman), gold(100), currentLocation(0), hasLost(false), initTurn(other.initTurn) {}
 
 //Registrare output su file
-void Player::logToFile(const std::string& message) const {
+void Player::logToFile(const std::string& message) const{
     std::ofstream logFile("game_log.txt", std::ios::app); // apre il file in modalità append
     if (logFile.is_open()) {
         logFile << message << std::endl;
@@ -118,17 +119,16 @@ void Player::takeTurn(Board& board) {
 void Player::move(int steps) {
     //calcola nuova posizione dopo lancio dadi
     int newPosition = (currentLocation + steps) % 28;
-    // Aggiorna currentLocation in base alla nuova posizione
-    currentLocation = newPosition;
-    std::cout << name << " moved " << steps << " steps. New position: " << currentLocation+1 << std::endl;
-    logToFile(name + " moved " + std::to_string(steps) + " steps. New position: " + std::to_string(currentLocation + 1));
-
     // Se il giocatore è andato oltre il bordo del vettore delle caselle, aggiungi 20 al saldo
     if (newPosition < currentLocation) {
         gold += 20;
         std::cout << name << " passed the starting position and earned 20 gold. New balance: " << gold << std::endl;
         logToFile(name + " passed the starting position and earned 20 gold. New balance: " + std::to_string(gold));
     }
+    // Aggiorna currentLocation in base alla nuova posizione
+    currentLocation = newPosition;
+    std::cout << name << " moved " << steps << " steps. New position: " << currentLocation+1 << std::endl;
+    logToFile(name + " moved " + std::to_string(steps) + " steps. New position: " + std::to_string(currentLocation + 1));
 }
 
 //controllo saldo disponibile
@@ -140,9 +140,3 @@ bool Player::checkBalance(int amount) {
     }
     return false;
 }
-
-/*void Player::humanChoice() {
-    // Logica per la scelta del giocatore umano
-    std::cout << "What do you want to do?" << std::endl;
-    // Implementa le azioni disponibili, ad esempio acquisto di proprietà, costruzione di edifici, ecc.
-}*/

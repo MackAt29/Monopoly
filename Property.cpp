@@ -24,12 +24,8 @@ Casella aka Property.
 	int Property::getStatus() {
 		return Status;
 	}
-
+	
 	Player* Property::getOwner() {
-		if (owner == nullptr) {
-			std::cout<<"No owner for this land.\n";
-			//throw "No owner for this land.";
-		}
 		return owner;
 	}
 
