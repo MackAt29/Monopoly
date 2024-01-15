@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
     //STEP 5: Stampa l'ordine dei giocatori della partita
     std::cout<<"Turn order: ";
     for (int i = 0; i < 4; ++i) {
-        std::cout<<"P"<<rounds[i].getName()<<" ";
+        std::cout<<"P"<<std::string(1, round[i].getName())<<" ";
     }
     std::cout<<std::endl;
     
@@ -92,8 +92,8 @@ int main(int argc, char** argv) {
                     
                     //DOPO AVER PAGATO UN PLAYER, controlla se sei andato in bancarotta. Se sì, vieni eliminato.
                     if(rounds[i].getGold()<=0){
-                        std::cout << "Player " << rounds[i].getName() << " has been terminated" << std::endl;
-                        rounds[i].logToFile("Player " + std::to_string(rounds[i].getName()) + " has been terminated");
+                        std::cout << "Player " << std::string(1, round[i].getName()) << " has been terminated" << std::endl;
+                        rounds[i].logToFile("Player " + std::string(1, rounds[i].getName()) + " has been terminated");
                         rounds.erase(rounds.begin() + i);
                     }
                 }
@@ -107,8 +107,8 @@ int main(int argc, char** argv) {
                     if(casella.getOwner() == nullptr){
                         //Controlla se hai soldi a sufficienza per l'acquisto del terreno. Se la risposta è no, salta avanti.
                         if(rounds[i].getGold()<casella.getBuyPrice()){
-                            std::cout << "Player " << rounds[i].getName() << " has not enough money to buy Property nr. "<< rounds[i].getPosition()+1 << std::endl;
-                            rounds[i].logToFile("Player " + std::to_string(rounds[i].getName()) + " has not enough money to buy Property nr. " + std::to_string(rounds[i].getPosition()+1));
+                            std::cout << "Player " << std::string(1, round[i].getName() << " has not enough money to buy Property nr. "<< rounds[i].getPosition()+1 << std::endl;
+                            rounds[i].logToFile("Player " + std::string(1, round[i].getName()) + " has not enough money to buy Property nr. " + std::to_string(rounds[i].getPosition()+1));
                         }
                         //SE LA RISPOSTA E' SI', allora procedi.
                         else {
@@ -149,8 +149,8 @@ int main(int argc, char** argv) {
                                 rounds[i].payProperty(casella.getBuyPrice());
                                 rounds[i].acquireProperty(casella);
                                 casella.buyLand(&rounds[i]);
-                                std::cout << "Player " << rounds[i].getName() << " has bought Property nr. "<< rounds[i].getPosition()+1 << std::endl;
-                                rounds[i].logToFile("Player " + std::to_string(rounds[i].getName()) + " has bought Property nr. " + std::to_string(rounds[i].getPosition()+1));
+                                std::cout << "Player " << std::string(1, round[i].getName() << " has bought Property nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                rounds[i].logToFile("Player " + std::string(1, round[i].getName()) + " has bought Property nr. " + std::to_string(rounds[i].getPosition()+1));
                             }
                         }
                     }
@@ -201,15 +201,15 @@ int main(int argc, char** argv) {
                                 if(casella.getStatus()==1){
                                     rounds[i].payProperty(casella.getHousePrice());
                                     casella.buyHouse();
-                                    std::cout << "Player " << rounds[i].getName() << " has built an house on Property nr. "<< rounds[i].getPosition()+1 << std::endl;
-                                    rounds[i].logToFile("Player " + std::to_string(rounds[i].getName()) + " has built an house on Property nr. " + std::to_string(rounds[i].getPosition()+1));
+                                    std::cout << "Player " << std::string(1, round[i].getName()) << " has built an house on Property nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                    rounds[i].logToFile("Player " + std::string(1, round[i].getName()) + " has built an house on Property nr. " + std::to_string(rounds[i].getPosition()+1));
                                 } 
                                 //SE questa casella ha una casa, potenziala in un albergo
                                 else if(casella.getStatus()==2){
                                     rounds[i].payProperty(casella.getHotelPrice());
                                     casella.buyHotel();
-                                    std::cout << "Player " << rounds[i].getName() << " has upgraded the Property nr. "<< rounds[i].getPosition()+1<< " into an hotel." << std::endl;
-                                    rounds[i].logToFile("Player " + std::to_string(rounds[i].getName()) + " has upgraded the Property nr. " + std::to_string(rounds[i].getPosition()+1) + " into an hotel.");
+                                    std::cout << "Player " << std::string(1, round[i].getName()) << " has upgraded the Property nr. "<< rounds[i].getPosition()+1<< " into an hotel." << std::endl;
+                                    rounds[i].logToFile("Player " + std::string(1, round[i].getName()) + " has upgraded the Property nr. " + std::to_string(rounds[i].getPosition()+1) + " into an hotel.");
                                 } 
                             }
                         }
@@ -227,8 +227,8 @@ int main(int argc, char** argv) {
 
     //STEP 9.1: Se la partita è conclusa perché è rimasto un solo giocatore, stampa il vincitore.
     if(rounds.size()==1) {
-        std::cout << "The WINNER is: P" << rounds[0].getName() << std::endl;
-        rounds[0].logToFile("The WINNER is: P" + std::to_string(rounds[0].getName()));
+        std::cout << "The WINNER is: P" << std::string(1, round[0].getName()) << std::endl;
+        rounds[0].logToFile("The WINNER is: P" + std::string(1, round[0].getName()));
     }   
     //STEP 9.2: Se la partita era tra 4 CPU E sono passati 10 turni stampa il giocatore che aveva più fiorini alla fine della partita
     else {
@@ -239,12 +239,12 @@ int main(int argc, char** argv) {
                 c=i;
             }
         }
-        std::cout << "The WINNER/s for the greatest amount of florins is/are: P" << rounds[c].getName();
-        rounds[c].logToFile("The WINNER for the greatest amount of florins is: P" + std::to_string(rounds[c].getName()));
+        std::cout << "The WINNER/s for the greatest amount of florins is/are: P" << std::string(1, round[c].getName());
+        rounds[c].logToFile("The WINNER for the greatest amount of florins is: P" + std::string(1, round[c].getName()));
         //"In caso di quantità uguale di fiorini, è permessa la vittoria ex-equo"
         for(int i = 0; i<rounds.size();++i){
             if(rounds[c].getGold()==rounds[i].getGold()&& c!=i){
-                std::cout << " P" << rounds[i].getName();
+                std::cout << " P" << std::string(1, round[c].getName());
             }
         }
     }
