@@ -42,8 +42,8 @@ void Player::payPlayer(Player* propertyOwner, int rentAmount) {
     gold -= rentAmount;
     propertyOwner->gold += rentAmount;
 
-    std::cout << std::string(1, name) << " paid rent of " << rentAmount << " to " << propertyOwner->std::string(1, name) << ". Remaining gold: " << gold << std::endl;
-    logToFile(std::string(1, name) + " paid rent of " + std::to_string(rentAmount) + " to " + propertyOwner->std::string(1, name) + ". Remaining gold: " + std::to_string(gold));
+    std::cout << std::string(1, name) << " paid rent of " << rentAmount << " to " << propertyOwner->name << ". Remaining gold: " << gold << std::endl;
+    logToFile(std::string(1, name) + " paid rent of " + std::to_string(rentAmount) + " to " + propertyOwner->name + ". Remaining gold: " + std::to_string(gold));
 
     if (checkBalance(0)) {
         hasLost = true;
