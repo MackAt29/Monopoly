@@ -1,3 +1,4 @@
+(AGGIUNTA MANUALE: Il logHuman è stato interrotto perché è troppo lunga la partita per essere messa tutta)
 1's turn: Rolled 3 and 1. Total: 4
 2's turn: Rolled 1 and 3. Total: 4
 3's turn: Rolled 3 and 2. Total: 5
