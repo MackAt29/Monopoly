@@ -24,12 +24,8 @@ Casella aka Property.
 	int Property::getStatus() {
 		return Status;
 	}
-//Il proprietario serve per impostarlo quando questo prende possesso di un nuovo territorio
+
 	Player* Property::getOwner() {
-		if (owner == nullptr) {
-			std::cout<<"No owner for this land.\n";
-			//throw "No owner for this land.";
-		}
 		return owner;
 	}
 
@@ -39,7 +35,7 @@ Casella aka Property.
 	}
 
 //Questo è il costruttore di Casella il commento in if sotto è ridondante dato che si sistema con default alla fine dello switch.
-	Property::Property(int newCategory) {
+	Property::Property(int newCategory, int numberPosition) : position(numberPosition) {
 		//if (Category > 3 || Category < 0) throw "Invalid category value.";
 		switch (newCategory)
 		{
@@ -72,20 +68,20 @@ Casella aka Property.
 			this->Status = 0;
 			break;
 		default:
-			throw "Invalid category value.";
+			std::cout<< "Invalid category value.\n";
 			break;
 		}
 	}
 //Metodo per comprare un terreno.
 	void Property::buyLand(Player *newOwner) {
-		if (Category == 3) { throw "Nothing to buy over here."; }
+		if (Category == 3) { std::cout<<  "Nothing to buy over here.\n"; }
 		Status = 1;
 		owner = newOwner;
 		updateRentPrice();
 	}
 //Metodo per comprare una casa
 	void Property::buyHouse() {
-		if (Category == 3) { throw "Nothing to buy over here."; }
+		if (Category == 3) { std::cout<<  "Nothing to buy over here.\n"; }
 		if (true) {
 			Status = 2;
 			updateRentPrice();
@@ -94,7 +90,7 @@ Casella aka Property.
 //Non si controlla nei metodi buyHouse() o buyHotel() se chi compra è lo stesso proprietario del terreno perchè lo si fa in player.
 //Metodo per comprare un hotel
 	void Property::buyHotel() {
-		if (Category == 3) { throw "Nothing to buy over here."; }
+		if (Category == 3) { std::cout<<  "Nothing to buy over here.\n"; }
 		if (true) {
 			Status = 3;
 			updateRentPrice();
@@ -103,6 +99,7 @@ Casella aka Property.
 //Metodo per impostare le caselle di proprietà di giocatori morti di nuovo vacanti
 	void Property::ripPlayer() {
 		Status = 0;
+		owner = nullptr;
 		owner = nullptr;
 		updateRentPrice();
 	}
@@ -118,21 +115,22 @@ Casella aka Property.
 			if (Category == 0) RentPrice = 2;
 			else if (Category == 1) RentPrice = 4;
 			else if (Category == 2) RentPrice = 7;
-			else throw "Invalid category value.";
+			else std::cout<<  "Invalid category value.\n";
 			break;
 		case 3:
 			if (Category == 0) RentPrice = 4;
 			else if (Category == 1) RentPrice = 8;
 			else if (Category == 2) RentPrice = 14;
-			else throw "Invalid category value.";
+			else std::cout<<  "Invalid category value.\n";
 			break;
 		default:
 			break;
 		}
 	}
-//Print per aiutare a fare la board grafica.
+	//Print per aiutare a fare la board grafica.
 	std::ostream& operator<<(std::ostream& output, const Property& Pr) {
-		if (Pr.Category == 0) { output << "E";
+		if (Pr.Category == 0) { 
+			output << "E";
 			switch (Pr.Status) {
 				case 0: break;
 				case 1: break;
@@ -141,7 +139,8 @@ Casella aka Property.
 				default: break;
 			}
 		};
-		if (Pr.Category == 1) {output << "S";
+		if (Pr.Category == 1) {
+			output << "S";
 			switch (Pr.Status){
 				case 0: break;
 				case 1: break;
@@ -150,7 +149,8 @@ Casella aka Property.
 				default: break;
 			}
 		};
-		if (Pr.Category == 2) { output << "L";
+		if (Pr.Category == 2) { 
+			output << "L";
 			switch (Pr.Status) {
 				case 0: break;
 				case 1: break;
@@ -159,7 +159,7 @@ Casella aka Property.
 			default: break;
 			}
 		};
-		if (Pr.Category == 3) { output << " "; return output; }; 
+		if (Pr.Category == 3) { return output; }; 
 		return output;
 	}
 //Metodo per stampare tutte le informazioni di una data casella
