@@ -43,18 +43,18 @@ void Board::showBoard(std::vector<Player>& players){
     std::cout<<"H  |  "<<v_[21]<<a[21]<<" | | "<<v_[20]<<a[20]<<" | | "<<v_[19]<<a[19]<<" | | "<<v_[18]<<a[18]<<" | | "<<v_[17]<<a[17]<<" | | "<<v_[16]<<a[16]<<" | | "<<v_[15]<<a[15]<<" | | "<<v_[14]<<a[14]<<"  |"<<std::endl;
 
     //REQUIRED: Show lista di caselle possedute dai Giocatori
-    std::cout<<"Lista delle caselle coi rispettivi Giocatori:"<<std::endl;
+    std::cout<<"List of Players' Properties:"<<std::endl;
     std::cout<<std::endl;
     for(int i=0;i<players.size();++i){
-        std::cout<<"Giocatore "<<players[i].getName()<<": ";
+        std::cout<<"Player "<<players[i].getName()<<": ";
         players[i].getOwnedList();
         std::cout<<std::endl;
     }
     
     //REQUIRED: Show ammontare di fiorini di ciascun Giocatore
-    std::cout<<"Lista dei Giocatori coi rispettivi fiorini"<<std::endl;
+    std::cout<<"List of Players' florins"<<std::endl;
     for(int i=0;i<players.size();++i){
-        std::cout<<"Giocatore "<<players[i].getName()<< ": "<< players[i].getGold()<< " fiorini." <<std::endl;
+        std::cout<<"Player "<<players[i].getName()<< ": "<< players[i].getGold()<< " florins." <<std::endl;
     }
     
 }
