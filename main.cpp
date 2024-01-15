@@ -161,15 +161,15 @@ int main(int argc, char** argv) {
                             while(humanTurn){
                                 std::cout<<"E' il tuo turno e sei arrivato su una tua casella."<<std::endl;
                                 std::string input;
-                                if(casella.getCategory()==1){
+                                if(casella.getStatus()==1){
                                     std::cout<<"\nVuoi comprare una casa per "<<casella.getHousePrice()<<" fiorini? [Y/N]"<<std::endl;
                                     std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
                                     std::cin >> input;
-                                } else if(casella.getCategory()==2){
+                                } else if(casella.getStatus()==2){
                                     std::cout<<"\nVuoi potenziarla in un albergo per "<<casella.getHotelPrice()<<" fiorini? [Y/N]"<<std::endl;
                                     std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
                                     std::cin >> input;
-                                } else if(casella.getCategory()==3){
+                                } else if(casella.getStatus()==3){
                                     std::cout<<"\nHai gia' un albergo in questa casella."<<std::endl;
                                     input = "N";
                                 }
