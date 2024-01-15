@@ -6,6 +6,8 @@ In questo file si trova il main e tutta la gestione dei turni
 #include "Player.h"
 #include "Property.h"
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <vector>
 
 int main(int argc, char** argv) {
@@ -91,6 +93,7 @@ int main(int argc, char** argv) {
                     //DOPO AVER PAGATO UN PLAYER, controlla se sei andato in bancarotta. Se sì, vieni eliminato.
                     if(rounds[i].getGold()<=0){
                         std::cout << "Giocatore " << rounds[i].getName() << " è stato eliminato" << std::endl;
+                        rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " è stato eliminato");
                         rounds.erase(rounds.begin() + i);
                     }
                 }
@@ -104,7 +107,8 @@ int main(int argc, char** argv) {
                     if(casella.getOwner() == nullptr){
                         //Controlla se hai soldi a sufficienza per l'acquisto del terreno. Se la risposta è no, salta avanti.
                         if(rounds[i].getGold()<casella.getBuyPrice()){
-                            std::cout << "Giocatore " << rounds[i].getName() << " non ha abbastanza soldi per comprare la Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                            std::cout << "Giocatore " << rounds[i].getName() << " non ha abbastanza soldi per comprare la casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                            rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " non ha abbastanza soldi per comprare la casella nr. " + std::to_string(rounds[i].getPosition()+1));
                         }
                         //SE LA RISPOSTA E' SI', allora procedi.
                         else {
@@ -145,7 +149,8 @@ int main(int argc, char** argv) {
                                 rounds[i].payProperty(casella.getBuyPrice());
                                 rounds[i].acquireProperty(casella);
                                 casella.buyLand(&rounds[i]);
-                                std::cout << "Giocatore " << rounds[i].getName() << " ha comprato la Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                std::cout << "Giocatore " << rounds[i].getName() << " ha comprato la casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha comprato la casella nr. " + std::to_string(rounds[i].getPosition()+1));
                             }
                         }
                     }
@@ -188,13 +193,15 @@ int main(int argc, char** argv) {
                                 if(casella.getStatus()==1){
                                     rounds[i].payProperty(casella.getHousePrice());
                                     casella.buyHouse();
-                                    std::cout << "Giocatore " << rounds[i].getName() << " ha costruito una casa nella Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                    std::cout << "Giocatore " << rounds[i].getName() << " ha costruito una casa nella casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                    rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha costruito una casa nella casella nr. " + std::to_string(rounds[i].getPosition()+1));
                                 } 
                                 //SE questa casella ha una casa, potenziala in un albergo
                                 else if(casella.getStatus()==2){
                                     rounds[i].payProperty(casella.getHotelPrice());
                                     casella.buyHotel();
-                                    std::cout << "Giocatore " << rounds[i].getName() << " ha potenziato la Casella nr. "<< rounds[i].getPosition()+1<< " in un albero." << std::endl;
+                                    std::cout << "Giocatore " << rounds[i].getName() << " ha potenziato la casella nr. "<< rounds[i].getPosition()+1<< " in un albero." << std::endl;
+                                    rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha potenziato la casella nr. " + std::to_string(rounds[i].getPosition()+1) + " in un albergo");
                                 } 
                             }
                         }
@@ -213,6 +220,7 @@ int main(int argc, char** argv) {
     //STEP 9.1: Se la partita è conclusa perché è rimasto un solo giocatore, stampa il vincitore.
     if(rounds.size()==1)
         std::cout << "Il vincitore della partita e': P" << rounds[0].getName() << std::endl;
+        rounds[0].logToFile("Il vincitore della partita e': P" + std::to_string(rounds[0].getName()));
 
     //STEP 9.2: Se la partita era tra 4 CPU E sono passati 10 turni stampa il giocatore che aveva più fiorini alla fine della partita
     else {
@@ -224,6 +232,7 @@ int main(int argc, char** argv) {
             }
         }
         std::cout << "Il vincitore/i della partita per maggior quantita' di fiorini: P" << rounds[c].getName();
+        rounds[c].logToFile("Il vincitore della partita e': P" + std::to_string(rounds[c].getName()));
         //"In caso di quantità uguale di fiorini, è permessa la vittoria ex-equo"
         for(int i = 0; i<rounds.size();++i){
             if(rounds[c].getGold()==rounds[i].getGold()&& c!=i){
