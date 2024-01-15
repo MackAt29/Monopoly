@@ -1,28 +1,30 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+project(monopoly_cpp)
 
-project(Monopoly)
+include_directories(include)
 
-add_library(Board
-Board.h
-Board.cpp
+add_library(BoardLib
+include/Board.h
+src/Board.cpp
 )
 
-add_library(Player
-Player.h
-Player.cpp
+add_library(PlayerLib
+include/Player.h
+src/Player.cpp
 )
 
-add_library(Property
-Property.h
-Property.cpp
+add_library(PropertyLib
+include/Property.h
+src/Property.cpp
 )
 
 add_executable(main
-main.cpp
+src/main.cpp
 )
 
 target_link_libraries(main
-Board
-Player
-Property
+BoardLib
+PlayerLib
+PropertyLib
 )
+
