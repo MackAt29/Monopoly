@@ -149,7 +149,7 @@ int main(int argc, char** argv) {
                                 rounds[i].payProperty(casella.getBuyPrice());
                                 rounds[i].acquireProperty(casella);
                                 casella.buyLand(&rounds[i]);
-                                std::cout << "Player " << std::string(1, rounds[i].getName() << " has bought Property nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                std::cout << "Player " << std::string(1, rounds[i].getName()) << " has bought Property nr. "<< rounds[i].getPosition()+1 << std::endl;
                                 rounds[i].logToFile("Player " + std::string(1, rounds[i].getName()) + " has bought Property nr. " + std::to_string(rounds[i].getPosition()+1));
                             }
                         }
