@@ -72,21 +72,20 @@ Casella aka Property.
 			this->Status = 0;
 			break;
 		default:
-			throw "Invalid category value.";
+			std::cout<< "Invalid category value.\n";
 			break;
 		}
 	}
 //Metodo per comprare un terreno.
 	void Property::buyLand(Player *newOwner) {
-		if (Category == 3) { throw "Nothing to buy over here."; }
+		if (Category == 3) { std::cout<<  "Nothing to buy over here.\n"; }
 		Status = 1;
-		owner = newOwner;
 		owner = newOwner;
 		updateRentPrice();
 	}
 //Metodo per comprare una casa
 	void Property::buyHouse() {
-		if (Category == 3) { throw "Nothing to buy over here."; }
+		if (Category == 3) { std::cout<<  "Nothing to buy over here.\n"; }
 		if (true) {
 			Status = 2;
 			updateRentPrice();
@@ -95,7 +94,7 @@ Casella aka Property.
 //Non si controlla nei metodi buyHouse() o buyHotel() se chi compra è lo stesso proprietario del terreno perchè lo si fa in player.
 //Metodo per comprare un hotel
 	void Property::buyHotel() {
-		if (Category == 3) { throw "Nothing to buy over here."; }
+		if (Category == 3) { std::cout<<  "Nothing to buy over here.\n"; }
 		if (true) {
 			Status = 3;
 			updateRentPrice();
@@ -120,13 +119,13 @@ Casella aka Property.
 			if (Category == 0) RentPrice = 2;
 			else if (Category == 1) RentPrice = 4;
 			else if (Category == 2) RentPrice = 7;
-			else throw "Invalid category value.";
+			else std::cout<<  "Invalid category value.\n";
 			break;
 		case 3:
 			if (Category == 0) RentPrice = 4;
 			else if (Category == 1) RentPrice = 8;
 			else if (Category == 2) RentPrice = 14;
-			else throw "Invalid category value.";
+			else std::cout<<  "Invalid category value.\n";
 			break;
 		default:
 			break;

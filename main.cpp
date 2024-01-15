@@ -79,11 +79,11 @@ int main(int argc, char** argv) {
                     //BOT: Ha i soldi, ma non si compra la casa
                     //BOT: Non ha i soldi, quindi non si compra la casa
                     if(rounds[i].getGold()<casella.getBuyPrice()){
-                        std::cout << "Giocatore " << rounds[i].getName() << " non ha abbastanza soldi per comprare la Casella nr. "<< rounds[i].getPosition() << std::endl;
+                        std::cout << "Giocatore " << rounds[i].getName() << " non ha abbastanza soldi per comprare la Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
                     } else {
                         if(rounds[i].isHumanPlayer()){
                             while(humanTurn){
-                                std::cout<<"E' il tuo turno. \nVuoi comprare il terreno per "<<casella.getBuyPrice()<<" fiorini? [Y/N]"<<std::endl;
+                                std::cout<<"E' il tuo turno. Sei arrivato alla Casella " << " " <<rounds[i].getPosition()+1 << " " << casella <<  " \nVuoi comprare il terreno per "<<casella.getBuyPrice()<<" fiorini? [Y/N]"<<std::endl;
                                 std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
                                 std::string input;
                                 std::cin >> input;
@@ -105,6 +105,7 @@ int main(int argc, char** argv) {
                         if(choice){
                             rounds[i].payProperty(casella.getBuyPrice());
                             casella.buyLand(&rounds[i]);
+                            std::cout << "Giocatore " << rounds[i].getName() << " ha comprato la Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
                         }
                     }
                 }
@@ -116,8 +117,15 @@ int main(int argc, char** argv) {
                             std::string input;
                             if(casella.getStatus()==1){
                                 std::cout<<"\nVuoi comprare una casa per "<<casella.getHousePrice()<<" fiorini? [Y/N]"<<std::endl;
-                            std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
-                            std::cin >> input;
+                                std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
+                                std::cin >> input;
+                            } else if(casella.getStatus()==2){
+                                std::cout<<"\nVuoi potenziarla in un albergo per "<<casella.getHotelPrice()<<" fiorini? [Y/N]"<<std::endl;
+                                std::cout<<"Digita ''show'' per vedere la situazione della partita."<<std::endl;
+                                std::cin >> input;
+                            } else if(casella.getStatus()==3){
+                                std::cout<<"\nHai gia' un albergo in questa casella."<<std::endl;
+                                input = "N";
                             }
 
                             if (input == "Y" || input == "y") {
@@ -131,6 +139,17 @@ int main(int argc, char** argv) {
                             } else {
                                 std::cout << "Input non valido. Riprova." << std::endl;
                             }
+                        }
+                        if(choice){
+                            if(casella.getStatus()==1){
+                                rounds[i].payProperty(casella.getHousePrice());
+                                casella.buyHouse();
+                                std::cout << "Giocatore " << rounds[i].getName() << " ha costruito una casa nella Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                            } else if(casella.getStatus()==2){
+                                rounds[i].payProperty(casella.getHotelPrice());
+                                casella.buyHotel();
+                                std::cout << "Giocatore " << rounds[i].getName() << " ha potenziato la Casella nr. "<< rounds[i].getPosition()+1<< " in un albero." << std::endl;
+                            } 
                         }
                         humanTurn=true;
                     }
@@ -147,16 +166,18 @@ int main(int argc, char** argv) {
 
             //REQUIRED: Salvare ogni evento su un file LOG
         }
+        game.showBoard(rounds);
 
         //TEMP: Rimozione dell'elemento puntato
-        p=rounds.erase(p);
-        std::cout << " Ho rimosso un player"<<std::endl;
+        //p=rounds.erase(p);
+        //std::cout << " Ho rimosso un player"<<std::endl;
         if(timelimit) turnLimit--;
     }
     std::cout<<std::endl;
 
     if(rounds.size()==1)
         std::cout << "Il vincitore della partita e': P" << rounds[0].getName() << std::endl;
+    else std::cout << "Tempo scaduto" << std::endl;
     //REQUIRED: ELSE IF partita conclusa per tempo scaduto, metodo di ricerca GOLD maggiore
     return 0;
 }
