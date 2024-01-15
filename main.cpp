@@ -143,6 +143,7 @@ int main(int argc, char** argv) {
                                     game.showBoard(rounds);
                                 } else {
                                     std::cout << "Input non valido. Riprova." << std::endl;
+                                    std::cin >> input;
                                 }
                             }
                             humanTurn=true;
@@ -177,7 +178,19 @@ int main(int argc, char** argv) {
 
     if(rounds.size()==1)
         std::cout << "Il vincitore della partita e': P" << rounds[0].getName() << std::endl;
-    else std::cout << "Tempo scaduto" << std::endl;
+    else {
+        game.showBoard(rounds);
+        std::cout << "Tempo scaduto" << std::endl;
+        int c = 0;
+        std::cout << "Gold di ricco "<< rounds[c].getGold() << std::endl;
+        std::cout << "Gold di ricco "<< rounds[0].getGold() << std::endl;
+        for(int i = 1; i<rounds.size();++i){
+            if(rounds[c].getGold()<rounds[i].getGold()){
+                c=i;
+            }
+        }
+        std::cout << "Il vincitore della partita per maggior quantita' di fiorini e': P" << rounds[c].getName() << std::endl;
+    }
     //REQUIRED: ELSE IF partita conclusa per tempo scaduto, metodo di ricerca GOLD maggiore
     return 0;
 }
