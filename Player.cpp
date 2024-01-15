@@ -1,5 +1,7 @@
+//Margherita Cattapan 2008798
 #include "player.h"
 #include <iostream>
+#include <fstream>
 #include <cstdlib>
 
 Player::Player(const char& playerName, bool human)
@@ -8,13 +10,24 @@ Player::Player(const char& playerName, bool human)
 // Costruttore di copia
 Player::Player(const Player& other) : name(other.name), isHuman(other.isHuman), gold(100), currentLocation(0), hasLost(false), initTurn(other.initTurn) {}
 
-//lancio dadiS
+//Registrare output su file
+void Player::logToFile(const std::string& message) const {
+    std::ofstream logFile("game_log.txt", std::ios::app); // apre il file in modalità append
+    if (logFile.is_open()) {
+        logFile << message << std::endl;
+    } else {
+        std::cerr << "Errore nell'apertura del file di log della partita!" << std::endl;
+    }
+}
+
+//lancio dadi
 int Player::getDiceRoll() {
     int dice1 = (rand() % 6) + 1;
     int dice2 = (rand() % 6) + 1;
     int totalDiceResult = dice1 + dice2;
     //Se vogliamo mostrare i risultati singoli su questo metodo o su quello di tiro dei dadi
     std::cout << name << "'s turn: Rolled " << dice1 << " and " << dice2 << ". Total: " << totalDiceResult << std::endl;
+    logToFile(name + "'s turn: Rolled " + std::to_string(dice1) + " and " + std::to_string(dice2) + ". Total: " + std::to_string(totalDiceResult));
     return totalDiceResult;
 }
 
@@ -29,10 +42,12 @@ void Player::payPlayer(Player* propertyOwner, int rentAmount) {
     propertyOwner->gold += rentAmount;
 
     std::cout << name << " paid rent of " << rentAmount << " to " << propertyOwner->name << ". Remaining gold: " << gold << std::endl;
+    logToFile(name + " paid rent of " + std::to_string(rentAmount) + " to " + propertyOwner->name + ". Remaining gold: " + std::to_string(gold));
 
     if (checkBalance(0)) {
         hasLost = true;
         std::cout << name << " has lost the game!" << std::endl;
+        logToFile(name + " has lost the game!");
     }
 }
 
@@ -41,8 +56,7 @@ void Player::payProperty(int priceAmount){
 }
 
 void Player::advance() {
-    //In questo modo mostra: Nome's turn: (metodo di tiro dei dadi + output dei risultati)
-    std::cout << name << "'s turn: ";
+    //setta il turno
     int totalDiceResult =getDiceRoll();
     setPosition(totalDiceResult);
 }
@@ -107,11 +121,13 @@ void Player::move(int steps) {
     // Aggiorna currentLocation in base alla nuova posizione
     currentLocation = newPosition;
     std::cout << name << " moved " << steps << " steps. New position: " << currentLocation+1 << std::endl;
+    logToFile(name + " moved " + std::to_string(steps) + " steps. New position: " + std::to_string(currentLocation + 1));
 
     // Se il giocatore è andato oltre il bordo del vettore delle caselle, aggiungi 20 al saldo
     if (newPosition < currentLocation) {
         gold += 20;
         std::cout << name << " passed the starting position and earned 20 gold. New balance: " << gold << std::endl;
+        logToFile(name + " passed the starting position and earned 20 gold. New balance: " + std::to_string(gold));
     }
 }
 
@@ -119,6 +135,7 @@ void Player::move(int steps) {
 bool Player::checkBalance(int amount) {
     if (gold < amount) {
         std::cout << name << " has insufficient funds and has lost the game!" << std::endl;
+        logToFile(name + " has insufficient funds and has lost the game!");
         return true;
     }
     return false;

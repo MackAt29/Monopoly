@@ -2,6 +2,8 @@
 #include "Player.h"
 #include "Property.h"
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <vector>
 
 int main(int argc, char** argv) {
@@ -70,6 +72,7 @@ int main(int argc, char** argv) {
                     //DOPO AVER PAGATO UN PLAYER, controlla se sei andato in bancarotta. Se si, vieni eliminato.
                     if(rounds[i].getGold()<=0){
                         std::cout << "Giocatore " << rounds[i].getName() << " è stato eliminato" << std::endl;
+                        rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " è stato eliminato");
                         rounds.erase(rounds.begin() + i);
                     }
                 }
@@ -84,6 +87,7 @@ int main(int argc, char** argv) {
                         //BOT: Non ha i soldi, quindi non si compra la casa
                         if(rounds[i].getGold()<casella.getBuyPrice()){
                             std::cout << "Giocatore " << rounds[i].getName() << " non ha abbastanza soldi per comprare la Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                            rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " non ha abbastanza soldi per comprare la Casella nr. " + std::to_string(rounds[i].getPosition()+1));
                         } else {
                             if(rounds[i].isHumanPlayer()){
                                 while(humanTurn){
@@ -93,15 +97,16 @@ int main(int argc, char** argv) {
                                     std::cin >> input;
 
                                     if (input == "Y" || input == "y") {
-                                        bool choice = true;
+                                        choice = true;
                                         humanTurn=false;
                                     } else if (input == "N" || input == "n") {
-                                        bool choice = false;
+                                        choice = false;
                                         humanTurn=false;
                                     } else if (input == "show") {
                                         game.showBoard(rounds);
                                     } else {
                                         std::cout << "Input non valido. Riprova." << std::endl;
+                                        std::cin >> input;
                                     }
                                 }
                                 humanTurn=true;
@@ -111,6 +116,7 @@ int main(int argc, char** argv) {
                                 rounds[i].acquireProperty(casella);
                                 casella.buyLand(&rounds[i]);
                                 std::cout << "Giocatore " << rounds[i].getName() << " ha comprato la Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha comprato la Casella nr. " + std::to_string(rounds[i].getPosition()+1));
                             }
                         }
                     }
@@ -134,15 +140,16 @@ int main(int argc, char** argv) {
                                 }
 
                                 if (input == "Y" || input == "y") {
-                                    bool choice = true;
+                                    choice = true;
                                     humanTurn=false;
                                 } else if (input == "N" || input == "n") {
-                                    bool choice = false;
+                                    choice = false;
                                     humanTurn=false;
                                 } else if (input == "show") {
                                     game.showBoard(rounds);
                                 } else {
                                     std::cout << "Input non valido. Riprova." << std::endl;
+                                    std::cin >> input;
                                 }
                             }
                             humanTurn=true;
@@ -151,20 +158,19 @@ int main(int argc, char** argv) {
                                     rounds[i].payProperty(casella.getHousePrice());
                                     casella.buyHouse();
                                     std::cout << "Giocatore " << rounds[i].getName() << " ha costruito una casa nella Casella nr. "<< rounds[i].getPosition()+1 << std::endl;
+                                    rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha costruito una casa nella Casella nr. " + std::to_string(rounds[i].getPosition()+1));
                                 } else if(casella.getStatus()==2){
                                     rounds[i].payProperty(casella.getHotelPrice());
                                     casella.buyHotel();
                                     std::cout << "Giocatore " << rounds[i].getName() << " ha potenziato la Casella nr. "<< rounds[i].getPosition()+1<< " in un albero." << std::endl;
+                                    rounds[i].logToFile("Giocatore " + std::to_string(rounds[i].getName()) + " ha potenziato la Casella nr. " + std::to_string(rounds[i].getPosition()+1) + " in un albergo");
                                 } 
                             }
                             humanTurn=true;
                         }
                     }
-
                 }
             }
-
-            //REQUIRED: Salvare ogni evento su un file LOG
         }
         game.showBoard(rounds);
 
@@ -175,9 +181,10 @@ int main(int argc, char** argv) {
     }
     std::cout<<std::endl;
 
-    if(rounds.size()==1)
+    if(rounds.size()==1) {
         std::cout << "Il vincitore della partita e': P" << rounds[0].getName() << std::endl;
-    else std::cout << "Tempo scaduto" << std::endl;
+        rounds[0].logToFile("Il vincitore della partita e': P" + std::to_string(rounds[0].getName()));
+    } else std::cout << "Tempo scaduto" << std::endl;
     //REQUIRED: ELSE IF partita conclusa per tempo scaduto, metodo di ricerca GOLD maggiore
     return 0;
 }
