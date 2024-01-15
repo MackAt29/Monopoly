@@ -3,7 +3,7 @@
 #include <vector>       // std::vector
 #include <ctime>        // std::time
 #include <cstdlib>      // std::rand, std::srand
-#include "Board.h"
+//#include "Board.h"
 #include "Player.h"
 #include "Property.h"
 
@@ -74,6 +74,14 @@ int main (){
         std::cout<<rounds[i].initTurn<< " ";
     }
     std::cout<<std::endl;
+    
+    Property casa(3);
+    std::cout<<"Stampo: "<<casa<< "casella" <<std::endl;
+
+    std::vector<Property> caselle = {Property(3),Property(0),Property(1),Property(2)};
+    for (int i = 0; i < caselle.size(); ++i) {
+        std::cout<<caselle[i]<< " ";
+    }
     
     return 0;
 }

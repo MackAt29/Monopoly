@@ -3,12 +3,16 @@
 #include <cstdlib>
 
 Player::Player(const char& playerName, bool human)
-    : name(playerName), isHuman(human), gold(100), currentLocation(0), HasLost(false), initTurn(getDiceRoll()) {}
+    : name(playerName), isHuman(human), gold(100), currentLocation(0), hasLost(false), initTurn(getDiceRoll()) {}
 
 // Costruttore di copia
-Player::Player(const Player& other) : name(other.name), isHuman(other.isHuman), gold(100), currentLocation(0), HasLost(false), initTurn(other.initTurn) {}
+Player::Player(const Player& other) : name(other.name), isHuman(other.isHuman), gold(100), currentLocation(0), hasLost(false), initTurn(other.initTurn) {}
 
+<<<<<<< HEAD
 //lancio dadi
+=======
+//lancio dadiS
+>>>>>>> 68c52fcc1ef578a9b1220e697eeb7768ec93b948
 int Player::getDiceRoll() {
     int dice1 = (rand() % 6) + 1;
     int dice2 = (rand() % 6) + 1;
@@ -23,6 +27,7 @@ void Player::setPosition(int totalDiceResult) {
     move(totalDiceResult);
 }
 
+<<<<<<< HEAD
 //restitutisce l'intero della posizione
 int Player::getPosition() const {
     return currentLocation;
@@ -30,11 +35,19 @@ int Player::getPosition() const {
 
 //metodo pagamento affitto
 void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
+=======
+//metodo pagamento affitto
+void Player::payPlayer(Player* propertyOwner, int rentAmount) {
+>>>>>>> 68c52fcc1ef578a9b1220e697eeb7768ec93b948
     gold -= rentAmount;
-    propertyOwner.gold += rentAmount;
+    propertyOwner->gold += rentAmount;
 
+<<<<<<< HEAD
     std::cout << name << " paid rent of " << rentAmount << " to " << propertyOwner.name
         << ". Remaining gold: " << gold << std::endl;
+=======
+    std::cout << name << " paid rent of " << rentAmount << " to " << propertyOwner->name << ". Remaining gold: " << gold << std::endl;
+>>>>>>> 68c52fcc1ef578a9b1220e697eeb7768ec93b948
 
     if (checkBalance(0)) {
         hasLost = true;
@@ -42,8 +55,34 @@ void Player::payPlayer(const Player& propertyOwner, int rentAmount) {
     }
 }
 
+<<<<<<< HEAD
 //metodo turno player
 void Player::takeTurn() {
+=======
+void Player::payProperty(int priceAmount){
+    gold -= priceAmount;
+}
+
+void Player::advance() {
+    //In questo modo mostra: Nome's turn: (metodo di tiro dei dadi + output dei risultati)
+    std::cout << name << "'s turn: ";
+    int totalDiceResult =getDiceRoll();
+    setPosition(totalDiceResult);
+}
+
+void Player::acquireProperty(Property& land){
+    ownList_.push_back(land);
+}
+
+void Player::getOwnedList(){
+    for(int i=0;i<ownList_.size();++i){
+        std::cout<<ownList_[i]<< ", ";
+    }
+}
+
+/*metodo turno player
+void Player::takeTurn(Board& board) {
+>>>>>>> 68c52fcc1ef578a9b1220e697eeb7768ec93b948
     //int totalDiceResult = getDiceRoll();
     //std::cout << name << "'s turn: Rolled " << totalDiceResult << std::endl;   
     
@@ -51,10 +90,17 @@ void Player::takeTurn() {
     std::cout << name << "'s turn: ";
     int totalDiceResult =getDiceRoll();
     setPosition(totalDiceResult);
+<<<<<<< HEAD
 
     if (v[currentLocation].owner != nullptr){
         payPlayer(*(v[currentLocation].owner), v[currentLocation].RentPrice);
     } else {
+=======
+    if (v[currentLocation].owner != nullptr){
+        payPlayer(*(v[currentLocation].owner), v[currentLocation].RentPrice);
+    }
+    else {
+>>>>>>> 68c52fcc1ef578a9b1220e697eeb7768ec93b948
         if (isHuman) {
             char choice;
             std::cout << "Vuoi comprare questa casella? [S/N]: ";
@@ -84,7 +130,11 @@ void Player::takeTurn() {
         }
     }
 }
+<<<<<<< HEAD
 
+=======
+*/
+>>>>>>> 68c52fcc1ef578a9b1220e697eeb7768ec93b948
 //mossa della pedina
 void Player::move(int steps) {
     //calcola nuova posizione dopo lancio dadi

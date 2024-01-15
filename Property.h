@@ -1,6 +1,9 @@
-#pragma once
+#ifndef PROPERTY_H
+#define PROPERTY_H
+
 #include "Player.h"
 #include <ostream>
+#include <string>
 
 #define BASE_LAND 0;
 #define ECO_HOME 2;
@@ -10,7 +13,11 @@
 #define LUX_HOME 7;
 #define LUX_HOTEL 14;
 
+<<<<<<< HEAD
 class Property;
+=======
+class Player;
+>>>>>>> 68c52fcc1ef578a9b1220e697eeb7768ec93b948
 
 class Property {
 public:
@@ -20,18 +27,20 @@ public:
 	int getHotelPrice();
 	int getRentPrice();
 	int getStatus();
-	Player getOwner();
+	int position;
+	Player* getOwner();
+	std::string getInfo();
 
 	void setStatus(int newStatus);
 
 	void buyHouse();
 	void buyHotel();
-	Property(int newCategory);
+	Property(int newCategory, int numberPosition);
 	void buyLand(Player *newOwner);
 	void ripPlayer();
-	//print
 
 	friend std::ostream& operator<<(std::ostream& output, const Property& Pr);
+
 
 private:
 	int Category = -1;
@@ -44,3 +53,4 @@ private:
 	Player *owner = nullptr;
 	void updateRentPrice();
 };
+#endif
