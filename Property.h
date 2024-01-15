@@ -48,4 +48,4 @@ private:
 	Player *owner = nullptr;
 	void updateRentPrice();
 };
-#ENDIF
+#endif
